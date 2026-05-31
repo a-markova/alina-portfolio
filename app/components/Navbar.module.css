@@ -1,0 +1,62 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background: var(--white);
+  border-bottom: 1.5px solid var(--red);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.name {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--red);
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.2s;
+  padding-bottom: 2px;
+}
+
+.links a:hover,
+.active {
+  color: var(--red) !important;
+  border-bottom: 1px solid var(--red);
+}
+
+.icons {
+  display: flex;
+  gap: 8px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+  transition: all 0.2s;
+}
+
+.icon:hover {
+  background: var(--red);
+  color: white;
+}
