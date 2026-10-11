@@ -7,19 +7,21 @@
 }
 
 :root {
-  --red: #E8173A;
-  --red-dark: #B8102C;
+  --red: #a3020c;
+  --red-dark: #6B1A2A;
+  --red-hover: #8a0209;
   --blush: #FDF0F2;
-  --blush2: #FADADF;
+  --blush2: #F5DADE;
   --white: #FFFFFF;
-  --sage: #7A9E8E;
-  --sage-dark: #4E7262;
-  --sage-light: #EAF2EE;
-  --sage-mid: #5E8C7A;
+  --cream: #FAF3E8;
+  --sage: #4A7C6F;
+  --sage-dark: #2E5C52;
+  --sage-light: #E6F0EE;
+  --sage-mid: #4A7C6F;
   --text: #1C1010;
   --text-muted: #7A6A6A;
-  --border: #F0D0D5;
-  --border-sage: #B8D4CA;
+  --border: #EDDCDC;
+  --border-sage: #A8C8C0;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'Inter', sans-serif;
 }

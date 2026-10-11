@@ -1,0 +1,40 @@
+.walker {
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Walk from right edge to left */
+@keyframes walkLeft {
+  from { transform: translateX(100vw); }
+  to   { transform: translateX(-120px); }
+}
+
+/* Walk from left edge to right */
+@keyframes walkRight {
+  from { transform: translateX(-120px); }
+  to   { transform: translateX(100vw); }
+}
+
+/* Leg wiggle: shift up/down to simulate a walking gait */
+@keyframes walk {
+  0%   { transform: translateY(0px); }
+  25%  { transform: translateY(-4px); }
+  50%  { transform: translateY(0px); }
+  75%  { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+.walkLeft {
+  animation: walkLeft 12s linear forwards;
+}
+
+.walkRight {
+  animation: walkRight 12s linear forwards;
+}
+
+.legs {
+  animation: walk 0.5s ease-in-out infinite;
+}

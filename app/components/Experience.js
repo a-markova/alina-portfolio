@@ -5,16 +5,16 @@ import styles from './Experience.module.css'
 
 const jobs = [
   {
+    date: 'Jun 2026 – Present',
+    role: 'Business Analyst',
+    org: 'Scientist.com',
+    desc: 'Founding member of the analytics function. Launched Scientist.com\'s first custom BI reports — supplier-facing dashboards that gave partners their first taste of digital reporting on the platform, alongside client-facing procurement analytics. Own all reporting needs and partner closely with the data science team on live product initiatives.',
+  },
+  {
     date: 'Jun 2024 – Jul 2025',
     role: 'FP&A Analyst',
     org: 'Scientist.com',
-    desc: 'Liaison connecting data science, finance, and accounting teams across open-ended ad-hoc analytical projects, translating quantitative findings into actionable financial insights.',
-  },
-  {
-    date: 'Apr 2026 – Present',
-    role: 'Marketing Analyst',
-    org: 'Mercury Insurance',
-    desc: 'Embedded in a cross-functional team to analyze the customer acquisition funnel — identifying conversion drop-off points, building reporting dashboards, and surfacing data-driven recommendations to optimize channel performance.',
+    desc: 'Liaison connecting data science, finance, and accounting teams. Built SQL-powered executive dashboards and contributed to multi-year revenue forecasts in support of a major transaction.',
   },
 ]
 

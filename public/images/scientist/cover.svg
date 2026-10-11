@@ -1,0 +1,24 @@
+<svg width="600" height="300" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="300" fill="#F9EDE8"/>
+  <rect x="0" y="0" width="600" height="300" fill="url(#grad)"/>
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="600" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F9EDE8"/>
+      <stop offset="100%" stop-color="#F2D9D0"/>
+    </linearGradient>
+  </defs>
+  <!-- Grid lines -->
+  <line x1="80" y1="60" x2="520" y2="60" stroke="#E8173A" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="80" y1="110" x2="520" y2="110" stroke="#E8173A" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="80" y1="160" x2="520" y2="160" stroke="#E8173A" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="80" y1="210" x2="520" y2="210" stroke="#E8173A" stroke-opacity="0.15" stroke-width="1"/>
+  <!-- Bar chart -->
+  <rect x="110" y="140" width="40" height="70" fill="#E8173A" opacity="0.3"/>
+  <rect x="170" y="110" width="40" height="100" fill="#E8173A" opacity="0.5"/>
+  <rect x="230" y="80" width="40" height="130" fill="#E8173A" opacity="0.7"/>
+  <rect x="290" y="95" width="40" height="115" fill="#E8173A" opacity="0.6"/>
+  <rect x="350" y="70" width="40" height="140" fill="#E8173A" opacity="0.8"/>
+  <rect x="410" y="55" width="40" height="155" fill="#E8173A" opacity="0.9"/>
+  <!-- Label -->
+  <text x="300" y="248" font-family="Georgia, serif" font-size="13" fill="#6B1A2A" text-anchor="middle" opacity="0.7">Scientist.com · Custom BI Reports</text>
+</svg>

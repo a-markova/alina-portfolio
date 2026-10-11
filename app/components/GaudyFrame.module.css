@@ -1,0 +1,289 @@
+/* ── Placement: hangs in the margin outside the 920px content column ── */
+.hang {
+  --w: clamp(112px, calc(50vw - 520px), 170px);
+  position: absolute;
+  width: var(--w);
+  z-index: 5;
+  transform: rotate(var(--tilt, 0deg));
+  pointer-events: none;
+
+  /* default palette: chipped gilt + crimson velvet */
+  --gilt: linear-gradient(135deg, #6e4a0c 0%, #f7e08b 16%, #b8862b 32%, #fff3b8 48%, #a8761f 64%, #f0d06a 82%, #5e3d08 100%);
+  --edge-dark: #5c3d08;
+  --edge-light: #f7e08b;
+  --bead: rgba(255, 238, 170, 0.95);
+  --orn: #d9ad45;
+  --orn-dark: #6b470b;
+  --jewel: #b0122a;
+  --velvet: #7a0f1e;
+  --velvet-hi: #b8304a;
+  --chip: #4a2f08;
+}
+.left  { right: calc(50% + 492px); }
+.right { left:  calc(50% + 492px); }
+
+@media (max-width: 1255px) {
+  .hang { display: none; }
+}
+
+.hang[data-variant='silver'] {
+  --gilt: linear-gradient(135deg, #4d4d52 0%, #f4f4f6 15%, #9b9ba3 32%, #ffffff 47%, #8a8a92 63%, #d9d9de 80%, #3e3e44 100%);
+  --edge-dark: #3a3a40;
+  --edge-light: #f2f2f5;
+  --bead: rgba(255, 255, 255, 0.9);
+  --orn: #c9c9cf;
+  --orn-dark: #4a4a52;
+  --jewel: #2a4fa8;
+  --velvet: #3d1748;
+  --velvet-hi: #7a3a8c;
+  --chip: #2b2b30;
+}
+
+.hang[data-variant='shabby'] {
+  --gilt: linear-gradient(135deg, #cfc4ad 0%, #fbf7ec 20%, #e6dcc6 38%, #fffdf6 52%, #d8cdb4 70%, #f5efe0 86%, #b9ab8e 100%);
+  --edge-dark: #a8873a;
+  --edge-light: #f0d06a;
+  --bead: rgba(214, 170, 70, 0.95);
+  --orn: #f6f0e2;
+  --orn-dark: #a8873a;
+  --jewel: #e58aa0;
+  --velvet: #2e5c52;
+  --velvet-hi: #5f9c8e;
+  --chip: #8a6f4a;
+}
+
+.hang[data-variant='pink'] {
+  --gilt: linear-gradient(135deg, #b8456a 0%, #ffc2d4 18%, #e0708f 34%, #ffe1ea 50%, #d45d80 66%, #f7a8be 84%, #8e2a4a 100%);
+  --edge-dark: #8a5f14;
+  --edge-light: #f7e08b;
+  --bead: rgba(247, 224, 139, 0.95);
+  --orn: #e9c25a;
+  --orn-dark: #7a520e;
+  --jewel: #2e8a6a;
+  --velvet: #1f4d3a;
+  --velvet-hi: #3f8a68;
+  --chip: #6b1a2a;
+}
+
+.hang[data-variant='oval'] {
+  --velvet: #1f4d3a;
+  --velvet-hi: #3f8a68;
+  --jewel: #1f6b4a;
+}
+
+/* ── Nail + picture wire; the whole thing swings from the nail ── */
+.swing {
+  position: relative;
+  padding-top: 30px;
+  transform-origin: 50% 4px;
+  pointer-events: auto;
+}
+.swing:hover { animation: swing 1.6s ease-out; }
+
+@keyframes swing {
+  0%   { transform: rotate(0); }
+  18%  { transform: rotate(5deg); }
+  40%  { transform: rotate(-3.5deg); }
+  62%  { transform: rotate(2deg); }
+  82%  { transform: rotate(-0.8deg); }
+  100% { transform: rotate(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .swing:hover { animation: none; }
+}
+
+.nail {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  margin-left: -4.5px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #f2f2f2, #8a8a8a 55%, #3a3a3a);
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35);
+  z-index: 3;
+}
+.wire {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  overflow: visible;
+}
+.wire polyline {
+  fill: none;
+  stroke: #6f6a60;
+  stroke-width: 1.2;
+  vector-effect: non-scaling-stroke;
+}
+
+/* ── The frame itself ── */
+.frame {
+  position: relative;
+  margin: 0;
+  padding: 15px;
+  /* flea-market wear: chips and grime over the gilt */
+  background:
+    radial-gradient(circle at 9% 38%, var(--chip) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle at 93% 64%, var(--chip) 0 2px, transparent 3px),
+    radial-gradient(circle at 61% 97%, var(--chip) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle at 34% 3%, var(--chip) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 80% 8%, rgba(60, 35, 0, 0.25) 0 6px, transparent 10px),
+    var(--gilt);
+  box-shadow:
+    inset 0 0 0 2px var(--edge-dark),
+    inset 0 0 0 4px var(--edge-light),
+    inset 0 0 0 5px var(--edge-dark),
+    inset 3px 3px 5px rgba(255, 255, 255, 0.55),
+    inset -3px -3px 6px rgba(0, 0, 0, 0.4),
+    0 0 0 1px var(--edge-dark),
+    4px 10px 16px rgba(50, 25, 10, 0.38),
+    1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* beaded carving ring */
+.frame::before {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border: 3px dotted var(--bead);
+  pointer-events: none;
+}
+
+.mat {
+  position: relative;
+  padding: 7px;
+  background:
+    radial-gradient(ellipse at 28% 18%, var(--velvet-hi), transparent 70%),
+    var(--velvet);
+  box-shadow:
+    0 0 0 2px var(--edge-light),
+    0 0 0 3px var(--edge-dark),
+    inset 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Oval: gilt cameo, no corners ── */
+.hang[data-variant='oval'] .frame,
+.hang[data-variant='oval'] .frame::before,
+.hang[data-variant='oval'] .mat,
+.hang[data-variant='oval'] .img {
+  border-radius: 50%;
+}
+.hang[data-variant='oval'] .frame::before { border-style: dashed; }
+.hang[data-variant='oval'] .mat { padding: 10px; }
+.hang[data-variant='oval'] .img { aspect-ratio: 4 / 5; object-fit: cover; }
+
+/* ── Ornaments ── */
+.orn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  fill: var(--orn);
+  stroke: var(--orn-dark);
+  stroke-width: 1;
+  filter: drop-shadow(1px 2px 1.5px rgba(0, 0, 0, 0.4));
+  overflow: visible;
+  z-index: 2;
+}
+.vein { stroke: var(--orn-dark); stroke-width: 0.6; opacity: 0.55; }
+.scroll { fill: none; stroke: var(--orn-dark); stroke-width: 1.6; }
+.jewel { fill: var(--jewel); stroke: none; }
+
+.crest { width: 46px; height: 46px; top: -30px; left: 50%; margin-left: -23px; }
+.tl { top: -12px;   left: -12px;   transform: rotate(-45deg); }
+.tr { top: -12px;   right: -12px;  transform: rotate(45deg); }
+.bl { bottom: -12px; left: -12px;  transform: rotate(-135deg); }
+.br { bottom: -12px; right: -12px; transform: rotate(135deg); }
+
+/* ── Engraved brass plaque on the bottom rail ── */
+.plaque {
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 2px 9px 3px;
+  white-space: nowrap;
+  font-family: var(--serif);
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #3d2806;
+  text-shadow: 0 1px 0 rgba(255, 245, 200, 0.7);
+  background: linear-gradient(180deg, #f7e08b, #c9993a 55%, #e9c868);
+  border: 1px solid #6b470b;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* ── Handwritten flea-market price tag dangling from the bottom corner ── */
+.tag {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 6px;
+  z-index: 4;
+  padding: 10px 7px 3px;
+  font-family: 'Bradley Hand', 'Segoe Print', 'Comic Sans MS', cursive;
+  font-size: 12px;
+  line-height: 1.1;
+  color: #b0122a;
+  background: #fbf3dc;
+  border: 1px solid #c9b48a;
+  border-radius: 7px 7px 2px 2px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+  transform: rotate(9deg);
+  transform-origin: 50% -10px;
+  white-space: nowrap;
+}
+.tag::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px #a8936a;
+}
+.tag::after {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  height: 18px;
+  border-left: 1px solid #8a7a5a;
+}
+.left .tag { right: auto; left: 6px; transform: rotate(-9deg); }
+
+/* ── Sold: red gallery dot + crossed-out price ── */
+.soldDot {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  z-index: 4;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ff5a5f, #c4101b 60%, #8a0710);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45), inset 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+.struck {
+  color: #7a6a6a;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: #b0122a;
+}
+
+/* ovals are narrow at the top — keep the wire tucked behind */
+.hang[data-variant='oval'] .wire { left: 22%; width: 56%; }

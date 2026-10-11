@@ -6,6 +6,27 @@ import styles from './Projects.module.css'
 
 const projects = [
   {
+    type: 'Business Intelligence · Product',
+    title: 'Scientist.com Custom BI Reports',
+    desc: 'Launched the platform\'s first custom reporting experience — supplier dashboards giving partners their first taste of digital reporting, plus client-facing procurement analytics.',
+    chips: ['SQL', 'Data Modeling', 'BI', 'Product'],
+    href: '/projects/scientist-bi',
+  },
+  {
+    type: 'Capstone · ML',
+    title: 'Petco Product Substitution Model',
+    desc: 'Led a 4-person team designing a demand transference framework for Petco\'s inventory and planning teams. Improved baseline assumptions by 82M.',
+    chips: ['Python', 'SQL', 'ML', 'PyTorch'],
+    href: '/projects/petco',
+  },
+  {
+    type: 'AI Agent · Analytics Engineering',
+    title: 'Variance Intelligence Agent',
+    desc: 'Agentic pipeline for Live Nation that compares revenue projections to actuals and autonomously surfaces explanations using LLMs and web search.',
+    chips: ['Python', 'LLM', 'SQL', 'RAG'],
+    href: '/projects/variance-agent',
+  },
+  {
     type: 'Machine learning · NLP',
     title: "Can a dress review predict if it'll fit?",
     desc: '190k+ Rent the Runway reviews across three ML tasks — sentiment, event type, and fit prediction.',

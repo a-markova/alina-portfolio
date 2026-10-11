@@ -1,0 +1,24 @@
+<svg width="600" height="300" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0" y1="0" x2="600" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EDE8F0"/>
+      <stop offset="100%" stop-color="#E0D8E8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#grad3)"/>
+  <!-- Line chart: projection vs actual -->
+  <polyline points="80,200 150,160 220,130 290,150 360,90 430,110 520,80" stroke="#E8173A" stroke-opacity="0.5" stroke-width="2" fill="none" stroke-dasharray="6,3"/>
+  <polyline points="80,200 150,155 220,145 290,170 360,100 430,85 520,95" stroke="#E8173A" stroke-opacity="0.9" stroke-width="2" fill="none"/>
+  <!-- Variance shading -->
+  <polygon points="220,130 220,145 290,170 360,100 360,90" fill="#E8173A" opacity="0.08"/>
+  <!-- Dots on actual -->
+  <circle cx="150" cy="155" r="4" fill="#E8173A" opacity="0.7"/>
+  <circle cx="290" cy="170" r="4" fill="#E8173A" opacity="0.7"/>
+  <circle cx="430" cy="85" r="4" fill="#E8173A" opacity="0.7"/>
+  <!-- Legend -->
+  <line x1="370" y1="240" x2="395" y2="240" stroke="#E8173A" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="400" y="244" font-family="sans-serif" font-size="10" fill="#6B1A2A" opacity="0.6">Projection</text>
+  <line x1="460" y1="240" x2="485" y2="240" stroke="#E8173A" stroke-opacity="0.9" stroke-width="2"/>
+  <text x="490" y="244" font-family="sans-serif" font-size="10" fill="#6B1A2A" opacity="0.6">Actual</text>
+  <text x="300" y="275" font-family="Georgia, serif" font-size="13" fill="#6B1A2A" text-anchor="middle" opacity="0.7">Variance Intelligence Agent · Live Nation</text>
+</svg>

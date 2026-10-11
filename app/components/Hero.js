@@ -18,17 +18,19 @@ export default function Hero() {
     <section className={styles.hero}>
 
       <svg className={styles.floralBg} viewBox="0 0 300 420" fill="none" aria-hidden="true">
-        <path d="M150 12 C150 12 115 56 76 76 C37 96 12 82 5 114 C-2 146 26 168 46 202 C66 236 54 270 72 292 C90 314 128 302 150 324" stroke="#E8173A" strokeWidth="1.3" strokeLinecap="round"/>
-        <path d="M150 12 C150 12 185 56 224 76 C263 96 288 82 295 114 C302 146 274 168 254 202 C234 236 246 270 228 292 C210 314 172 302 150 324" stroke="#E8173A" strokeWidth="1.3" strokeLinecap="round"/>
-        <ellipse cx="76" cy="76" rx="18" ry="10" fill="#E8173A" opacity="0.6" transform="rotate(-30 76 76)"/>
-        <ellipse cx="224" cy="76" rx="18" ry="10" fill="#E8173A" opacity="0.6" transform="rotate(30 224 76)"/>
-        <ellipse cx="46" cy="202" rx="15" ry="9" fill="#7A9E8E" opacity="0.7" transform="rotate(-45 46 202)"/>
-        <ellipse cx="254" cy="202" rx="15" ry="9" fill="#7A9E8E" opacity="0.7" transform="rotate(45 254 202)"/>
-        <circle cx="150" cy="12" r="11" fill="#E8173A" opacity="0.6"/>
-        <circle cx="150" cy="324" r="9" fill="#7A9E8E" opacity="0.5"/>
+        <path d="M150 12 C150 12 115 56 76 76 C37 96 12 82 5 114 C-2 146 26 168 46 202 C66 236 54 270 72 292 C90 314 128 302 150 324" stroke="#E8173A" strokeWidth="1.3" strokeLinecap="round" />
+        <path d="M150 12 C150 12 185 56 224 76 C263 96 288 82 295 114 C302 146 274 168 254 202 C234 236 246 270 228 292 C210 314 172 302 150 324" stroke="#E8173A" strokeWidth="1.3" strokeLinecap="round" />
+        <ellipse cx="76" cy="76" rx="18" ry="10" fill="#E8173A" opacity="0.6" transform="rotate(-30 76 76)" />
+        <ellipse cx="224" cy="76" rx="18" ry="10" fill="#E8173A" opacity="0.6" transform="rotate(30 224 76)" />
+        <ellipse cx="46" cy="202" rx="15" ry="9" fill="#7A9E8E" opacity="0.7" transform="rotate(-45 46 202)" />
+        <ellipse cx="254" cy="202" rx="15" ry="9" fill="#7A9E8E" opacity="0.7" transform="rotate(45 254 202)" />
+        <circle cx="150" cy="12" r="11" fill="#E8173A" opacity="0.6" />
+        <circle cx="150" cy="324" r="9" fill="#7A9E8E" opacity="0.5" />
       </svg>
 
       <div className={styles.inner}>
+
+        {/* LEFT column */}
         <div>
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0}>
             <p className={styles.eyebrow}>Data analytics · Business · Strategy</p>
@@ -36,7 +38,7 @@ export default function Hero() {
               Alina<br /><em className={styles.nameAccent}>Markova</em>
             </h1>
             <p className={styles.tagline}>
-              I study business analytics at UCSD because I want to understand people through data, not instead of them.
+              Welcome to my website! The intention is to be as candid as LinkedIn allows. You can view my professional projects, artistic creations, and (of course) hobbies. I hope you enjoy. 
             </p>
           </motion.div>
 
@@ -47,58 +49,73 @@ export default function Hero() {
 
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={2} className={styles.portraitCluster}>
             <div className={styles.phone}>
-              <a href="mailto:alina@markov.com" className={styles.phoneLink}>
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,7 12,13 22,7"/></svg>
-                alina@markov.com
+              <a href="mailto:alina@markov.com" className={styles.phoneLink} title="Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2" /><polyline points="2,7 12,13 22,7" />
+                </svg>
               </a>
-              <a href="https://linkedin.com/in/alinamarkova" target="_blank" rel="noopener" className={styles.phoneLink}>
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><line x1="8" y1="11" x2="8" y2="17"/><line x1="8" y1="7" x2="8" y2="8"/><path d="M12 11v6M12 14c0-2 6-3 6 1v2"/></svg>
-                LinkedIn ↗
+              <a href="https://linkedin.com/in/alinamarkova" target="_blank" rel="noopener" className={styles.phoneLink} title="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="3" />
+                  <line x1="8" y1="11" x2="8" y2="17" />
+                  <line x1="8" y1="7" x2="8" y2="8" />
+                  <path d="M12 11v6M12 14c0-2 6-3 6 1v2" />
+                </svg>
               </a>
-              <a href="https://github.com/rsm-amarkova" target="_blank" rel="noopener" className={styles.phoneLink}>
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-                GitHub ↗
+              <a href="https://github.com/rsm-amarkova" target="_blank" rel="noopener" className={styles.phoneLink} title="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />
+                </svg>
               </a>
             </div>
-            <Image
-              src="/images/Alina_Headshot.JPG"
-              alt="Alina Markova"
-              width={112}
-              height={112}
-              className={styles.portrait}
-              priority
-            />
+            <div className={styles.portraitWrap}>
+              <Image
+                src="/images/Alina_Headshot2.JPG"
+                alt="Alina Markova"
+                width={500}
+                height={190}
+                className={styles.portrait}
+                priority
+              />
+              <div className={styles.portraitCaption}>
+                <span className={styles.captionText}>alina</span>
+                <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
+                  <path d="M12 38 L12 2 M4 8 L12 0 L20 8" stroke="var(--red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+            </div>
           </motion.div>
         </div>
 
+        {/* RIGHT column */}
         <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={1}>
           <div className={styles.statGrid}>
             {[
-              { num: '12,000', label: 'Hours of higher education' },
-              { num: '190', label: 'Cohort I represent' },
-              { num: '27%', label: 'Of analysts are women' },
-              { num: '7', label: 'Projects and counting' },
+              { num: 'Cross-Functional Experience', label: 'Analytics, Reporting, Consulting' },
+              { num: '3 Years of Experience', label: 'Founding member of Business Intelligence team @ Scientist.com' },
+              { num: 'Biotech & Pharma', label: '' },
+              { num: 'East of Eden', label: 'Book of the month' },
             ].map((s, i) => (
               <motion.div key={i} className={styles.stat} whileHover={{ scale: 1.02 }} transition={{ duration: 0.15 }}>
-                <span className={styles.statNum}>{s.num}</span>
+            <span className={styles.statNum}>{s.num}</span>
                 <span className={styles.statLabel}>{s.label}</span>
               </motion.div>
             ))}
           </div>
           <div className={styles.chips}>
-            {['SQL','Python','Tableau','Power BI','R','ML','Snowflake','GenAI','Polars','Google Analytics'].map(c => (
+            {['SQL', 'Python', 'Tableau', 'Power BI', 'R', 'ML', 'AI', 'Agentic AI', 'Snowflake', 'GenAI', 'Polars', 'Google Analytics'].map(c => (
               <span key={c} className={styles.chip}>{c}</span>
             ))}
           </div>
         </motion.div>
+
       </div>
 
       <div className={styles.scrollHint} aria-hidden="true">
         <span>Scroll</span>
         <svg className={styles.scrollArrow} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <polyline points="6,9 12,15 18,9"/>
+          <polyline points="6,9 12,15 18,9" />
         </svg>
-      </div>
-    </section>
+      </div>   </section>
   )
 }

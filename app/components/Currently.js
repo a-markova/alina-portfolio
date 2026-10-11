@@ -6,22 +6,22 @@ import styles from './Currently.module.css'
 
 const entries = [
   {
-    title: 'Petco Product Substitution Model',
-    subtitle: 'MSBA Capstone · Industry Partner Project',
-    date: 'April 2026',
-    approach: 'Researching substitution literature to ground a model in customer behavior rather than product similarity alone.',
-    methodology: 'Collaborative research with Petco data scientists. Building toward a behavior-driven substitution recommendation framework.',
-    tags: ['Capstone', 'ML', 'SQL', 'Substitution', 'Literature Review'],
-    accentTag: 'Capstone',
+    title: 'Custom BI Reports — Scientist.com',
+    subtitle: 'Scientist.com · Business Intelligence',
+    date: 'Jun 2026',
+    approach: 'Partnered with the dev team to build Scientist.com\'s first custom reporting experience for both customers and suppliers — giving partners their first look at digital reporting on the platform.',
+    methodology: 'Designing procurement and spend dashboards end-to-end: requirements gathering, data modeling, and stakeholder reviews. Own all reporting needs across the company.',
+    tags: ['BI', 'SQL', 'Data Modeling', 'Stakeholder Management', 'Product'],
+    accentTag: 'BI',
   },
   {
-    title: 'Variance Intelligence Agent',
-    subtitle: 'Live Nation · Analytics Engineering',
-    date: 'April 2026',
-    approach: 'Agentic pipeline comparing revenue and attendance projections to actuals, surfacing explanations autonomously through internal data and external research.',
-    methodology: 'LLM-orchestrated reasoning loop combining structured SQL results with web search to distinguish signal from noise in forecast misses.',
-    tags: ['AI Agent', 'Python', 'SQL', 'LLM', 'FP&A'],
-    accentTag: 'AI Agent',
+    title: 'Data Science Collaboration',
+    subtitle: 'Scientist.com · Analytics & Data Science',
+    date: 'Ongoing',
+    approach: 'Working side-by-side with the data science team to bring analytical insights into client-facing products and internal tooling.',
+    methodology: 'Translating business questions into analytical requirements, scoping projects with DS, and leading delivery of client-facing initiatives end-to-end.',
+    tags: ['Analytics', 'Python', 'SQL', 'Cross-functional', 'Client-facing'],
+    accentTag: 'Analytics',
   },
 ]
 

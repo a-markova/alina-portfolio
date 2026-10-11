@@ -1,5 +1,7 @@
 import './globals.css'
 import Navbar from './components/Navbar'
+import CatWalker from './components/CatWalker'
+import 'katex/dist/katex.min.css'
 
 export const metadata = {
   title: 'Alina Markova',
@@ -12,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         {children}
+        <CatWalker />
       </body>
     </html>
   )

@@ -1,0 +1,466 @@
+.heroSection {
+  background: var(--white);
+  padding: 4.5rem 2.5rem 5rem;
+  overflow: visible;
+}
+
+.heroInner {
+  max-width: 920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.heroLeft {}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+
+.heroName {
+  font-family: var(--serif);
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.accent {
+  color: var(--red);
+  font-style: italic;
+}
+
+.heroBio {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  max-width: 420px;
+}
+
+.heroRight {
+  display: flex;
+  justify-content: center;
+}
+
+.portraitWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.portrait {
+  border-radius: 2px;
+  object-fit: cover;
+  display: block;
+  border: 1.5px solid var(--border);
+}
+
+.portraitAccent {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: -12px;
+  bottom: -12px;
+  border: 1.5px solid var(--red);
+  border-radius: 2px;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+/* ── BANDS ── */
+.blushBand {
+  background: var(--blush);
+  padding: 3.5rem 2.5rem;
+}
+
+.whiteBand {
+  background: var(--white);
+  padding: 3.5rem 2.5rem;
+}
+
+.inner {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* ── EDUCATION ── */
+.eduGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.eduCard {
+  background: var(--white);
+  border: 1.5px solid var(--red);
+  padding: 1.5rem;
+  transition: background 0.2s;
+}
+
+.eduCard:hover { background: var(--blush2); }
+
+.eduDegree {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.eduSchool {
+  font-size: 13px;
+  color: var(--red);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.eduYear {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.eduNote {
+  font-size: 12px;
+  color: var(--sage-dark);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* ── CURRENTLY ── */
+.nowCard {
+  background: var(--white);
+  border: 1.5px solid var(--red);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.nowLabel {
+  position: absolute;
+  top: -1px;
+  left: 1.5rem;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  background: var(--red);
+  padding: 2px 12px;
+}
+
+.nowTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.liveBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.liveDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sage);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.liveText {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+  font-weight: 600;
+}
+
+.datePill {
+  font-size: 11px;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 3px 12px;
+  border-radius: 100px;
+}
+
+.nowTitle {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.nowSub {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.nowFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.fieldLabel {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.fieldBody {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.tag {
+  font-size: 11px;
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.accent {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* ── MINI FRAMES — gaudy flea market gold ── */
+.miniFrame {
+  background: #faf6ed;
+  padding: 7px 7px 22px 7px;
+  /* layered gold frame: bright gold → dark gold outline → inner bead line */
+  border: 7px solid #C9A84C;
+  box-shadow:
+    0 0 0 2px #8B6210,        /* dark inner line */
+    0 0 0 4px #E8C86D,        /* bright gold highlight */
+    0 0 0 5px #8B6210,        /* outer dark ring */
+    4px 6px 14px rgba(0,0,0,0.38);
+  display: inline-block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+  position: relative;
+}
+
+/* inner corner ornament suggestion via pseudo */
+.miniFrame::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid #E8C86D;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.miniFrame:hover {
+  transform: rotate(0deg) scale(1.07) !important;
+  box-shadow:
+    0 0 0 2px #8B6210,
+    0 0 0 4px #E8C86D,
+    0 0 0 5px #8B6210,
+    6px 10px 20px rgba(0,0,0,0.46);
+}
+
+.miniFrameImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.miniFrameCaption {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 10px;
+  color: #9a7a60;
+  text-align: center;
+  padding-top: 7px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* scattered placement on the about hero */
+.paintingCluster {
+  position: relative;
+  overflow: visible;
+}
+
+.paintingA {
+  position: absolute;
+  top: -20px;
+  right: -40px;
+  width: 140px;
+  transform: rotate(-4deg);
+  z-index: 2;
+}
+
+.paintingB {
+  position: absolute;
+  top: 120px;
+  right: 80px;
+  width: 120px;
+  transform: rotate(3.5deg);
+  z-index: 1;
+}
+
+.paintingC {
+  position: absolute;
+  top: 260px;
+  right: -20px;
+  width: 130px;
+  transform: rotate(-2deg);
+  z-index: 2;
+}
+
+/* ── HOBBIES ── */
+.hobbiesIntro {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.hobbiesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.hobbyCard {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.hobbyCard:hover {
+  border-color: var(--red);
+  transform: translateY(-2px);
+}
+
+.hobbyPhotoPlaceholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--blush2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hobbyEmoji {
+  font-size: 32px;
+}
+
+.hobbyPhotoLabel {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.hobbyName {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+  padding: 1rem 1rem 0.25rem;
+}
+
+.hobbyDesc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  padding: 0 1rem 1.25rem;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--blush);
+  padding: 2rem 2.5rem;
+  border-top: 1.5px solid var(--red);
+}
+
+.footerInner {
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerSig {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--red);
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footerLinks a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footerLinks a:hover { color: var(--red); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 720px) {
+  .heroInner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .heroName { font-size: 44px; }
+  .eduGrid { grid-template-columns: 1fr; }
+  .hobbiesGrid { grid-template-columns: 1fr; }
+  .nowFields { grid-template-columns: 1fr; }
+  .gallerySection { grid-template-columns: 1fr; gap: 2.5rem; }
+  .galleryHeading { font-size: 36px; }
+}
