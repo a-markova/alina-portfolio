@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import GaudyFrame from '../components/GaudyFrame'
+import HandMark from '../components/HandMark'
+import Signature from '../components/Signature'
 import styles from './about.module.css'
 
 function FadeIn({ children, delay = 0 }) {
@@ -35,13 +37,13 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <p className={styles.eyebrow}>About me</p>
+            <p className={styles.eyebrow}><HandMark kind="line">About me</HandMark></p>
             <h1 className={styles.heroName}>
               Data worker.<br />
               <em className={styles.accent}>with hobbies</em>
             </h1>
             <p className={styles.heroBio}>
-              At work I love trying to automate my boring tasks (using shiny new tools; thank you AI) so I can focus on running rich analyses instead. Rich Analyses = Rich Checking Account.
+              At work, I'm pulling data for internal teams, building reporting for external ones, and dabbling in data science and dev. My favorite part is connecting all the teams it takes to get a project across the finish line.
             </p>
             <p className={styles.heroBio}>
               At home, I'm always spending time with loved ones, trying to get outside, and fiddling with art projects!
@@ -78,7 +80,7 @@ export default function About() {
       <section className={styles.blushBand}>
         <div className={styles.inner} style={{ position: 'relative', overflow: 'visible' }}>
           <FadeIn>
-            <p className={styles.eyebrow}>Education</p>
+            <p className={styles.eyebrow}><HandMark kind="double">Education</HandMark></p>
           </FadeIn>
           <div className={styles.eduGrid}>
             {[
@@ -119,7 +121,7 @@ export default function About() {
       {/* ── FOOTER ── */}
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerSig}>Alina Markova, 2026</span>
+          <Signature year={2026} />
           <div className={styles.footerLinks}>
             <a href="https://linkedin.com/in/alinamarkova" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://github.com/a-markova" target="_blank" rel="noopener">GitHub</a>

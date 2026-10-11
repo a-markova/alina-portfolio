@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import styles from './Projects.module.css'
+import HandMark from './HandMark'
 
 const projects = [
   {
@@ -80,7 +81,7 @@ export default function Projects() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          Projects
+          <HandMark kind="double">Projects</HandMark>
         </motion.p>
         <div className={styles.grid}>
           {projects.map((p, i) => <ProjectCard key={i} p={p} i={i} />)}

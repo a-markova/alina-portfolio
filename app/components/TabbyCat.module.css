@@ -1,0 +1,36 @@
+.cat {
+  display: block;
+  overflow: visible;
+}
+
+.leg {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+}
+.walking .legA { animation: stride 0.5s ease-in-out infinite; }
+.walking .legB { animation: stride 0.5s ease-in-out infinite reverse; }
+
+@keyframes stride {
+  0%, 100% { transform: rotate(16deg); }
+  50%      { transform: rotate(-16deg); }
+}
+
+.walking .head { animation: bob 0.5s ease-in-out infinite; }
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-0.8px); }
+}
+
+.tail {
+  transform-box: fill-box;
+  transform-origin: 100% 100%;
+  animation: flick 2.4s ease-in-out infinite;
+}
+@keyframes flick {
+  0%, 100% { transform: rotate(0); }
+  50%      { transform: rotate(-9deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .walking .legA, .walking .legB, .walking .head, .tail { animation: none; }
+}

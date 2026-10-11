@@ -8,7 +8,7 @@ const jobs = [
     date: 'Jun 2026 – Present',
     role: 'Business Analyst',
     org: 'Scientist.com',
-    desc: 'Founding member of the analytics function. Launched Scientist.com\'s first custom BI reports — supplier-facing dashboards that gave partners their first taste of digital reporting on the platform, alongside client-facing procurement analytics. Own all reporting needs and partner closely with the data science team on live product initiatives.',
+    desc: 'Bridging dev, data science, and the business to ship reporting that clients and suppliers actually use. Launched a new reporting tool on schedule, built custom visualizations and tooling to scale report development, brought AI into savings validation (cutting review time by over 70%), and mentored a summer intern along the way.',
   },
   {
     date: 'Jun 2024 – Jul 2025',

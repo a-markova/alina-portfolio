@@ -3,25 +3,26 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import styles from './Currently.module.css'
+import HandMark from './HandMark'
 
 const entries = [
   {
-    title: 'Custom BI Reports — Scientist.com',
+    title: 'Client & Supplier Reporting',
     subtitle: 'Scientist.com · Business Intelligence',
     date: 'Jun 2026',
-    approach: 'Partnered with the dev team to build Scientist.com\'s first custom reporting experience for both customers and suppliers — giving partners their first look at digital reporting on the platform.',
-    methodology: 'Designing procurement and spend dashboards end-to-end: requirements gathering, data modeling, and stakeholder reviews. Own all reporting needs across the company.',
-    tags: ['BI', 'SQL', 'Data Modeling', 'Stakeholder Management', 'Product'],
+    approach: 'Partnered with dev and data science to launch a new reporting tool for clients and suppliers, on schedule. Now building out the reports that show both sides the value of the platform.',
+    methodology: 'Custom HTML visualizations on top of SQL, plus internal tooling that makes reports faster to build, maintain, and scale. Mentored our summer intern through shipping their first supplier reports.',
+    tags: ['BI', 'SQL', 'HTML/CSS/JS', 'Cross-functional', 'Mentorship'],
     accentTag: 'BI',
   },
   {
-    title: 'Data Science Collaboration',
-    subtitle: 'Scientist.com · Analytics & Data Science',
+    title: 'AI Savings Validation',
+    subtitle: 'Scientist.com · AI & Automation',
     date: 'Ongoing',
-    approach: 'Working side-by-side with the data science team to bring analytical insights into client-facing products and internal tooling.',
-    methodology: 'Translating business questions into analytical requirements, scoping projects with DS, and leading delivery of client-facing initiatives end-to-end.',
-    tags: ['Analytics', 'Python', 'SQL', 'Cross-functional', 'Client-facing'],
-    accentTag: 'Analytics',
+    approach: 'Brought AI into the monthly savings validation process, cutting review time by over 70%.',
+    methodology: 'Integrating LLMs to handle the repetitive checks so people only review what needs a human eye. Always on the lookout for the next manual process to automate.',
+    tags: ['AI', 'LLMs', 'Automation', 'Python', 'Process Improvement'],
+    accentTag: 'AI',
   },
 ]
 
@@ -82,7 +83,7 @@ export default function Currently() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          Currently
+          <HandMark kind="line">Currently</HandMark>
         </motion.p>
         {entries.map((entry, i) => (
           <NowCard key={i} entry={entry} i={i} />

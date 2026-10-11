@@ -3,28 +3,28 @@ import { useRef, useEffect, useState } from 'react'
 import * as d3 from 'd3'
 import { useInView, motion, AnimatePresence } from 'framer-motion'
 import styles from './Timeline.module.css'
+import HandMark from './HandMark'
 
 // Order = chronological. First item = top-left start.
 const events = [
-  { id: 'born', date: 'May 2002', title: 'Born', type: 'life', size: 'large', img: '/images/timeline/born.jpg',
-    desc: 'Congratulations, Mom and Dad!' },
-  { id: 'undergrad', date: 'Sep 2021', title: 'Started at UC San Diego', type: 'school', size: 'large', img: '/images/timeline/undergrad.jpg',
-    desc: 'I explored a lot of majors before landing on Economics. The department gave me flexibility to pursue data analytics, finance — and even some dance.' },
-  { id: 'internships', date: '2024', title: 'The Internship Era', type: 'work', size: 'medium', img: '/images/timeline/internships.jpg',
-    desc: "Consulting at Mentor Global, wealth management at Tidemark, and beyond. I'm grateful to the mentors from this stretch." },
-  { id: 'ta', date: 'Mar 2024', title: 'Teaching Assistant', type: 'work', size: 'large', img: '/images/timeline/ta.jpg',
-    desc: 'My gateway to grad school, debt-free. The most schemed-out chapter of my life — I negotiated my fees to come out net positive.' },
-  { id: 'scientist-fpa', date: 'Jun 2024', title: 'Beginning of Scientist.com', type: 'work', size: 'medium', img: '/images/timeline/scientist-fpa.jpg',
-    desc: 'The start of my Scientist.com story. An amazing finance team, as many hats as I wanted, and networking my heart out.' },
-  { id: 'grad-bs', date: 'Jun 2025', title: 'Graduated — BS Economics', type: 'school', size: 'large', img: '/images/timeline/grad-bs.jpg',
+  { id: 'born', date: 'May 2002', title: 'Born', type: 'life', size: 'large',
+    desc: 'Happy childhood, loving family!' },
+  { id: 'undergrad', date: 'Sep 2021', title: 'Started at UC San Diego', type: 'school', size: 'large', img: '/images/timeline/undergrad.jpg', pos: '40% 62%',
+    desc: 'I explored a lot of majors before landing on Economics. The department gave me flexibility to pursue data analytics, finance, and even some dance!' },
+  { id: 'internships', date: '2024', title: 'The Internship Era', type: 'work', size: 'medium', img: '/images/timeline/internships.jpg', pos: '0% 50%',
+    desc: 'Getting to try on as many hats as I want. Wealth Management, Consulting, and FP&A. My favorite part was the people I got to meet.' },
+  { id: 'ta', date: 'Mar 2024', title: 'Teaching Assistant', type: 'work', size: 'large', img: '/images/timeline/ta.jpg', pos: '35% 40%',
+    desc: 'My gateway to grad school, debt-free. The most schemed-out chapter of my life: 800 hours of TAing, and I negotiated my fees to come out net positive.' },
+  { id: 'grad-bs', date: 'Jun 2025', title: 'Graduated: BS Economics', type: 'school', size: 'large', img: '/images/timeline/grad-bs.jpg', pos: '50% 22%',
     desc: 'Graduation came up unexpectedly! Good thing I was headed right back into school.' },
-  { id: 'msba', date: 'Jul 2025', title: 'MSBA at Rady', type: 'school', size: 'large', img: '/images/timeline/msba.jpg',
-    desc: 'A transformative year. I became cohort rep and won the Robert S. Sullivan Award for Exemplary Leadership — given to one graduate per year.' },
-  { id: 'business-analyst', date: 'Jun 2026', title: 'Business Analyst', type: 'work', size: 'large', img: '/images/timeline/business-analyst.jpg',
-    desc: 'Here I am today — a business analyst at a company I love, adding to my skillset while working toward a mission I respect.', current: true },
+  { id: 'msba', date: 'Jul 2025', title: 'UC San Diego Grad School', type: 'school', size: 'large', img: ['/images/timeline/grad-bs.jpg', '/images/timeline/msba.jpg'], pos: ['50% 22%', '50% 45%'], badge: 'x2',
+    desc: "What a time. I think anyone you ask about grad school will start with a sigh. Then, hopefully, they'll say it was all worth it <3" },
+  { id: 'business-analyst', date: 'Jun 2026', title: 'Business Analyst', type: 'work', size: 'large', img: '/images/timeline/scientist-fpa.jpg', pos: '45% 50%', badge: 'x2',
+    desc: 'Here I am today: a business analyst at a company I love, adding to my skillset while working toward a mission I respect.', current: true },
 ]
 
 const COLORS = { life: '#a3020c', school: '#4A7C6F', work: '#6B1A2A' }
+const PETALS = { life: '#f2a7b5', school: '#a9cfc3', work: '#d9909f' }
 const SIZES = { large: 17, medium: 12, small: 9 }
 
 // Layout constants
@@ -105,6 +105,15 @@ export default function Timeline() {
       const r = SIZES[e.size]
       const color = COLORS[e.type]
 
+      // petals tucked behind the node — they bloom open on hover
+      const bloom = g.append('g')
+      d3.range(6).forEach(k => {
+        bloom.append('g').attr('transform', `rotate(${k * 60})`)
+          .append('ellipse').attr('class', styles.petal)
+          .attr('cx', 0).attr('cy', -r * 0.95).attr('rx', r * 0.6).attr('ry', r * 0.95)
+          .attr('fill', PETALS[e.type]).style('transition-delay', `${k * 45}ms`)
+      })
+
       if (e.type === 'life') {
         g.append('path')
           .attr('d', d3.symbol().type(d3.symbolStar).size(r * r * 9)())
@@ -127,8 +136,8 @@ export default function Timeline() {
       }
 
       g.append('circle').attr('r', r + 16).attr('fill', 'transparent')
-        .on('mouseenter', () => setHovered(e.id))
-        .on('mouseleave', () => setHovered(null))
+        .on('mouseenter', () => { setHovered(e.id); g.classed(styles.bloomOn, true) })
+        .on('mouseleave', () => { setHovered(null); g.classed(styles.bloomOn, false) })
 
       // Labels: date above, title below (or flipped on bottom row edges)
       const labelBelow = e.row % 2 === 0
@@ -185,7 +194,7 @@ export default function Timeline() {
       <div className={styles.inner}>
         <motion.p className={styles.eyebrow}
           initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}>
-          My Story
+          <HandMark kind="circle">My Story</HandMark>
         </motion.p>
 
         <div className={styles.legend}>
@@ -217,9 +226,14 @@ export default function Timeline() {
                   transition={{ duration: 0.22, ease: [0.25, 0.1, 0.25, 1] }}
                 >
                   <div className={styles.cardCircle}>
-                    {he.img && <img src={he.img} alt={he.title} className={styles.cardImg} />}
+                    {[].concat(he.img || []).map((src, i, all) => (
+                      <img key={src} src={src} alt={all.length > 1 ? '' : he.title}
+                        className={`${styles.cardImg} ${all.length > 1 ? styles.cardHalf : ''}`}
+                        style={he.pos && { objectPosition: [].concat(he.pos)[i] }} />
+                    ))}
                     <div className={styles.cardOverlay} />
                   </div>
+                  {he.badge && <span className={styles.cardBadge} aria-label="again">{he.badge}</span>}
                   <div className={styles.cardText}>
                     <div className={styles.cardDate}>{he.date}</div>
                     <div className={styles.cardTitle}>{he.title}</div>

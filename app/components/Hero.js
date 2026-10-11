@@ -70,19 +70,13 @@ export default function Hero() {
             </div>
             <div className={styles.portraitWrap}>
               <Image
-                src="/images/Alina_Headshot2.JPG"
+                src="/images/Alina_Beach.jpg"
                 alt="Alina Markova"
-                width={500}
-                height={190}
+                width={480}
+                height={600}
                 className={styles.portrait}
                 priority
               />
-              <div className={styles.portraitCaption}>
-                <span className={styles.captionText}>alina</span>
-                <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
-                  <path d="M12 38 L12 2 M4 8 L12 0 L20 8" stroke="var(--red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
             </div>
           </motion.div>
         </div>

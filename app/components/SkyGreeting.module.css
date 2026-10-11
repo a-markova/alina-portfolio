@@ -1,0 +1,85 @@
+.band {
+  position: relative;
+  height: 190px;
+  background: var(--blush);
+  overflow: hidden;
+  /* melt into the hero below */
+  -webkit-mask-image: linear-gradient(#000 72%, transparent);
+  mask-image: linear-gradient(#000 72%, transparent);
+}
+
+.sky {
+  position: absolute;
+  inset: 0;
+  animation: fade 0.5s ease both;
+}
+@keyframes fade { from { opacity: 0; } }
+
+.orb {
+  position: absolute;
+  left: 50%;
+  top: 34px;
+  width: 64px;
+  height: 64px;
+  margin-left: -32px;
+  border-radius: 50%;
+  animation: rise 2.6s cubic-bezier(.2, .7, .2, 1) 0.4s both;
+}
+.moon::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 70% 35%, rgba(160, 150, 120, 0.35) 0 5px, transparent 6px),
+              radial-gradient(circle at 38% 62%, rgba(160, 150, 120, 0.3) 0 8px, transparent 9px),
+              radial-gradient(circle at 60% 74%, rgba(160, 150, 120, 0.25) 0 3px, transparent 4px);
+}
+@keyframes rise {
+  from { transform: translateY(110px) scale(0.85); }
+  to   { transform: translateY(0) scale(1); }
+}
+
+.clouds {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.cloudsL { animation: partL 3.2s cubic-bezier(.4, 0, .2, 1) 0.8s both; }
+.cloudsR { animation: partR 3.2s cubic-bezier(.4, 0, .2, 1) 0.8s both; }
+@keyframes partL { to { transform: translateX(-32%); } }
+@keyframes partR { to { transform: translateX(32%); } }
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #fff;
+  animation: twinkle 2.8s ease-in-out infinite;
+}
+@keyframes twinkle { 50% { opacity: 0.2; } }
+
+.hello {
+  position: absolute;
+  left: 50%;
+  top: 112px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--font-hand), cursive;
+  font-size: 28px;
+  z-index: 2;
+  animation: fadeUp 1s ease 2.3s both;
+}
+@keyframes fadeUp { from { opacity: 0; transform: translate(-50%, 8px); } }
+
+@media (max-width: 720px) {
+  .band { height: 150px; }
+  .hello { top: 96px; font-size: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb, .clouds, .hello, .sky, .star { animation: none; }
+  .cloudsL { transform: translateX(-32%); }
+  .cloudsR { transform: translateX(32%); }
+}

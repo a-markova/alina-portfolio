@@ -6,8 +6,10 @@
   z-index: 5;
   transform: rotate(var(--tilt, 0deg));
   pointer-events: none;
+}
 
-  /* default palette: chipped gilt + crimson velvet */
+/* default palette: chipped gilt + crimson velvet */
+.palette {
   --gilt: linear-gradient(135deg, #6e4a0c 0%, #f7e08b 16%, #b8862b 32%, #fff3b8 48%, #a8761f 64%, #f0d06a 82%, #5e3d08 100%);
   --edge-dark: #5c3d08;
   --edge-light: #f7e08b;
@@ -26,7 +28,7 @@
   .hang { display: none; }
 }
 
-.hang[data-variant='silver'] {
+.palette[data-variant='silver'] {
   --gilt: linear-gradient(135deg, #4d4d52 0%, #f4f4f6 15%, #9b9ba3 32%, #ffffff 47%, #8a8a92 63%, #d9d9de 80%, #3e3e44 100%);
   --edge-dark: #3a3a40;
   --edge-light: #f2f2f5;
@@ -39,7 +41,7 @@
   --chip: #2b2b30;
 }
 
-.hang[data-variant='shabby'] {
+.palette[data-variant='shabby'] {
   --gilt: linear-gradient(135deg, #cfc4ad 0%, #fbf7ec 20%, #e6dcc6 38%, #fffdf6 52%, #d8cdb4 70%, #f5efe0 86%, #b9ab8e 100%);
   --edge-dark: #a8873a;
   --edge-light: #f0d06a;
@@ -52,7 +54,7 @@
   --chip: #8a6f4a;
 }
 
-.hang[data-variant='pink'] {
+.palette[data-variant='pink'] {
   --gilt: linear-gradient(135deg, #b8456a 0%, #ffc2d4 18%, #e0708f 34%, #ffe1ea 50%, #d45d80 66%, #f7a8be 84%, #8e2a4a 100%);
   --edge-dark: #8a5f14;
   --edge-light: #f7e08b;
@@ -65,7 +67,7 @@
   --chip: #6b1a2a;
 }
 
-.hang[data-variant='oval'] {
+.palette[data-variant='oval'] {
   --velvet: #1f4d3a;
   --velvet-hi: #3f8a68;
   --jewel: #1f6b4a;
@@ -172,15 +174,15 @@
 }
 
 /* ── Oval: gilt cameo, no corners ── */
-.hang[data-variant='oval'] .frame,
-.hang[data-variant='oval'] .frame::before,
-.hang[data-variant='oval'] .mat,
-.hang[data-variant='oval'] .img {
+.palette[data-variant='oval'] .frame,
+.palette[data-variant='oval'] .frame::before,
+.palette[data-variant='oval'] .mat,
+.palette[data-variant='oval'] .img {
   border-radius: 50%;
 }
-.hang[data-variant='oval'] .frame::before { border-style: dashed; }
-.hang[data-variant='oval'] .mat { padding: 10px; }
-.hang[data-variant='oval'] .img { aspect-ratio: 4 / 5; object-fit: cover; }
+.palette[data-variant='oval'] .frame::before { border-style: dashed; }
+.palette[data-variant='oval'] .mat { padding: 10px; }
+.palette[data-variant='oval'] .img { aspect-ratio: 4 / 5; object-fit: cover; }
 
 /* ── Ornaments ── */
 .orn {
@@ -286,4 +288,120 @@
 }
 
 /* ovals are narrow at the top — keep the wire tucked behind */
-.hang[data-variant='oval'] .wire { left: 22%; width: 56%; }
+.palette[data-variant='oval'] .wire { left: 22%; width: 56%; }
+
+/* ── Clickable: lift a painting off the wall ── */
+.swing { cursor: zoom-in; outline: none; }
+.swing:focus-visible .frame { outline: 2px solid var(--red); outline-offset: 4px; }
+.crooked .swing { cursor: pointer; }
+
+/* knocked crooked by a passing cat — springs back when clicked */
+.tilt {
+  transform-origin: 50% 4px;
+  transition: transform 0.9s cubic-bezier(.3, 1.9, .5, 1);
+}
+
+/* ── Seasonal decor ── */
+.snowcap {
+  position: absolute;
+  left: -9px;
+  top: -9px;
+  width: calc(100% + 18px);
+  z-index: 3;
+  filter: drop-shadow(0 2px 2px rgba(80, 100, 130, 0.25));
+  pointer-events: none;
+}
+.palette[data-variant='oval'] .snowcap { left: 18%; width: 64%; top: -4px; }
+.blossom { position: absolute; width: 26px; height: 26px; z-index: 4; pointer-events: none; }
+.b0 { left: -12px; top: -10px; }
+.b1 { right: -10px; top: 14px; width: 20px; height: 20px; }
+.b2 { left: -8px; bottom: 18px; width: 22px; height: 22px; }
+.pumpkin { position: absolute; left: -16px; bottom: -14px; width: 40px; z-index: 4; pointer-events: none; transform: rotate(-6deg); }
+.right .pumpkin { left: auto; right: -16px; transform: rotate(6deg); }
+.beePath {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  z-index: 5;
+  pointer-events: none;
+  animation: orbit 7s linear infinite;
+}
+.bee { position: absolute; width: 26px; left: calc(var(--w, 150px) * 0.62); top: -10px; animation: buzz 0.25s ease-in-out infinite; }
+@keyframes orbit { to { transform: rotate(360deg); } }
+@keyframes buzz { 50% { transform: translateY(-2px) rotate(4deg); } }
+.particle {
+  position: absolute;
+  top: 10%;
+  z-index: 4;
+  pointer-events: none;
+  opacity: 0;
+  animation: drift linear infinite;
+}
+.leaf   { width: 11px; height: 6px; border-radius: 0 100% 0 100%; }
+.flake  { width: 5px; height: 5px; border-radius: 50%; background: #fff; box-shadow: 0 0 2px rgba(80, 100, 140, 0.6); }
+.petalP { width: 7px; height: 5px; border-radius: 50% 50% 50% 0; }
+@keyframes drift {
+  0%   { transform: translate(0, 0) rotate(0); opacity: 0; }
+  10%  { opacity: 1; }
+  50%  { transform: translate(18px, 140px) rotate(200deg); }
+  100% { transform: translate(-8px, 290px) rotate(420deg); opacity: 0; }
+}
+
+/* ── Lightbox ── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(28, 16, 16, 0.72);
+  backdrop-filter: blur(4px);
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  animation: lbFade 0.3s ease;
+  overflow-y: auto;
+}
+@keyframes lbFade { from { opacity: 0; } }
+.lbInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  animation: liftOff 0.45s cubic-bezier(.2, 1.3, .4, 1);
+}
+@keyframes liftOff { from { transform: scale(0.6) rotate(-4deg); opacity: 0; } }
+.lbFrame { position: relative; display: inline-block; }
+.lbFrame .frame { display: inline-block; }
+.lbFrame .mat { display: inline-block; }
+.lbFrame .img { width: auto; max-width: min(64vw, 440px); max-height: 66vh; }
+.lbText {
+  max-width: 260px;
+  background: var(--cream);
+  padding: 1.5rem;
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 14px;
+}
+.lbText h3 { font-family: var(--serif); font-size: 30px; font-weight: 500; font-style: italic; }
+.lbMeta { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin: 0.25rem 0 0.75rem; }
+.lbSold { display: inline-block; font-family: var(--font-hand), cursive; font-size: 18px; color: #b0122a; margin-bottom: 0.5rem; }
+.lbClose {
+  margin-top: 1rem;
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border: 1px solid var(--red);
+  background: var(--white);
+  color: var(--red);
+  cursor: pointer;
+}
+.lbClose:hover { background: var(--red); color: var(--white); }
+
+@media (prefers-reduced-motion: reduce) {
+  .particle, .beePath, .bee { animation: none; display: none; }
+  .tilt { transition: none; }
+}

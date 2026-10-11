@@ -1,4 +1,5 @@
 import Hero from './components/Hero'
+import SkyGreeting from './components/SkyGreeting'
 import WaveDivider from './components/WaveDivider'
 import Currently from './components/Currently'
 import Timeline from './components/Timeline'
@@ -9,6 +10,7 @@ import GaudyFrame from './components/GaudyFrame'
 export default function Home() {
   return (
     <main>
+      <SkyGreeting />
       <Hero />
       <WaveDivider topColor="var(--white)" bottomColor="var(--blush)" />
 

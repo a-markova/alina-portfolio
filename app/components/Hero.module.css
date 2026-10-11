@@ -174,8 +174,8 @@
 }
 
 .portrait {
-  width: 500px;
-  height: 190px;
+  width: 240px;
+  height: 300px;
   object-fit: cover;
   object-position: center 30%;
   margin-top: 0;
@@ -190,21 +190,6 @@
   align-items: flex-end;
 }
 
-.portraitCaption {
-  margin-right: 100px; /* increase to move left, decrease to move right */
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 5px;
-  justify-content: flex-end;
-}
-
-.captionText {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 13px;
-  color: var(--text-muted);
-}
 .statGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;

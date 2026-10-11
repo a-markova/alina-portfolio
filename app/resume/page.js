@@ -103,8 +103,11 @@ export default function Resume() {
                     </div>
                   </div>
                   <ul className={styles.bullets}>
-                    <li>Launched Scientist.com's first custom BI reports — customer-facing procurement dashboards and supplier-facing digital reporting that gave partners their first view of platform activity.</li>
-                    <li>Own all reporting needs company-wide; lead client-facing analytics initiatives and partner closely with the data science team on live product work.</li>
+                    <li>Partnered with dev and data science to launch a new reporting tool for clients and suppliers, delivered on schedule.</li>
+                    <li>Built custom HTML visualizations and internal tools that streamline how reports are developed, maintained, and scaled.</li>
+                    <li>Integrated AI/LLMs into the savings validation process, cutting monthly review time by over 70%.</li>
+                    <li>Created new client and supplier reports that demonstrate platform value and support growth.</li>
+                    <li>Mentored a summer intern through delivering their first supplier reports.</li>
                   </ul>
                 </div>
 
@@ -152,7 +155,8 @@ export default function Resume() {
               <div className={styles.sectionLabel}>Skills & Competencies</div>
               <div className={styles.skillsGrid}>
                 {[
-                  { label: 'Programming & Data', value: 'Python (pandas, polars, seaborn, numpy, sklearn, pyspark) · SQL · R · Snowflake' },
+                  { label: 'Programming & Data', value: 'Python (pandas, polars, seaborn, numpy, sklearn, pyspark) · SQL · R · Snowflake · HTML/CSS/JS' },
+                  { label: 'AI & Automation', value: 'LLM Integration · AI Agents · Prompt Engineering · Claude Code · Workflow & Report Automation' },
                   { label: 'BI & Analytics', value: 'Power BI · Tableau · Apache Superset · A/B Testing · Google Analytics' },
                   { label: 'Enterprise & Finance', value: 'NetSuite · Workday Adaptive Planning · Salesforce' },
                   { label: 'Decision Support', value: 'Excel (Advanced) · Adaptive Insights · Bloomberg' },

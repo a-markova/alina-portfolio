@@ -1,40 +1,37 @@
-.walker {
+.parade {
   position: fixed;
+  left: 0;
+  right: 0;
   bottom: 0;
+  height: 90px;
   z-index: 9999;
   pointer-events: none;
-  cursor: default;
 }
 
-/* Walk from right edge to left */
-@keyframes walkLeft {
-  from { transform: translateX(100vw); }
-  to   { transform: translateX(-120px); }
+.runner {
+  position: absolute;
+  bottom: 0;
+  left: -120px;
+  animation: dash 3.2s linear forwards;
+}
+.runner2 { animation-delay: 0.45s; bottom: 6px; }
+
+/* sprinting, not strolling */
+.runner :global(g) { animation-duration: 0.22s !important; }
+
+@keyframes dash {
+  to { left: calc(100% + 140px); }
 }
 
-/* Walk from left edge to right */
-@keyframes walkRight {
-  from { transform: translateX(-120px); }
-  to   { transform: translateX(100vw); }
-}
-
-/* Leg wiggle: shift up/down to simulate a walking gait */
-@keyframes walk {
-  0%   { transform: translateY(0px); }
-  25%  { transform: translateY(-4px); }
-  50%  { transform: translateY(0px); }
-  75%  { transform: translateY(-4px); }
-  100% { transform: translateY(0px); }
-}
-
-.walkLeft {
-  animation: walkLeft 12s linear forwards;
-}
-
-.walkRight {
-  animation: walkRight 12s linear forwards;
-}
-
-.legs {
-  animation: walk 0.5s ease-in-out infinite;
+.mrrp {
+  position: absolute;
+  top: -22px;
+  left: 70px;
+  font-family: var(--font-hand), cursive;
+  font-size: 20px;
+  color: var(--red);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0 8px;
 }
