@@ -37,7 +37,7 @@ export default function RentTheRunway() {
               <span><strong>Type</strong> Academic · ML</span>
               <span><strong>Dataset</strong> 190k+ RTR reviews</span>
               <span><strong>Models</strong> Logistic Regression · TF-IDF</span>
-              <a href="https://rsm-amarkova.github.io/renttherunway/" target="_blank" rel="noopener" className={styles.ghLink}>View on GitHub ↗</a>
+              <a href="https://a-markova.github.io/renttherunway/" target="_blank" rel="noopener" className={styles.ghLink}>View on GitHub ↗</a>
             </div>
           </motion.div>
         </div>
@@ -97,7 +97,7 @@ export default function RentTheRunway() {
               desc: 'Reviews bucketed into negative / neutral / positive to address heavy 5-star skew. The model learns sentiment from review text alone.',
               methods: ['TF-IDF unigrams + bigrams', 'Logistic regression', '3-class'],
               finding: 'Positive sentiment is easy to catch. Neutral is where errors cluster — the language between "fine" and "great" is genuinely ambiguous.',
-              matrix: 'https://rsm-amarkova.github.io/renttherunway/matrix_task1.png',
+              matrix: 'https://a-markova.github.io/renttherunway/matrix_task1.png',
               caption: 'Confusion matrix · TF-IDF + Logistic Regression · 73.6% accuracy',
             },
             {
@@ -106,7 +106,7 @@ export default function RentTheRunway() {
               desc: 'Predicting what occasion the customer rented for — restricted to top 5 event categories to reduce sparse-label noise.',
               methods: ['TF-IDF unigrams + bigrams', 'Logistic regression', 'Top-5 labels'],
               finding: '"Wedding" and "formal affair" bleed into each other constantly. The model struggles where humans would too.',
-              matrix: 'https://rsm-amarkova.github.io/renttherunway/matrix_task2.png',
+              matrix: 'https://a-markova.github.io/renttherunway/matrix_task2.png',
               caption: 'Confusion matrix · TF-IDF + Logistic Regression · 53.5% accuracy',
             },
             {
@@ -115,7 +115,7 @@ export default function RentTheRunway() {
               desc: 'Using structured metadata — height, weight, size, age, body type — to predict whether an item ran small, true to fit, or large.',
               methods: ['StandardScaler', 'OneHotEncoder', 'Logistic regression'],
               finding: 'Customers self-select toward items likely to fit. The dominant "fit" class makes beating baseline nearly impossible — which is itself a useful business insight.',
-              matrix: 'https://rsm-amarkova.github.io/renttherunway/matrix_task3.png',
+              matrix: 'https://a-markova.github.io/renttherunway/matrix_task3.png',
               caption: 'Confusion matrix · Logistic Regression + metadata · 73.8% accuracy',
             },
           ].map((task, i) => (

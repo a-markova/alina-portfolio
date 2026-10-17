@@ -36,7 +36,7 @@ export default function UpliftModel() {
               <span><strong>Type</strong> Marketing analytics · Causal ML</span>
               <span><strong>Dataset</strong> 120,000 users · RCT</span>
               <span><strong>Models</strong> Logistic · RF · XGBoost · MLP</span>
-              <a href="https://github.com/rsm-amarkova/uplift_model_cg" target="_blank" rel="noopener" className={styles.ghLink}>View on GitHub ↗</a>
+              <a href="https://github.com/a-markova/uplift_model_cg" target="_blank" rel="noopener" className={styles.ghLink}>View on GitHub ↗</a>
             </div>
           </motion.div>
         </div>

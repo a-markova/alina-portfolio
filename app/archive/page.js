@@ -143,7 +143,7 @@ export default function Archive() {
           <span className={styles.footerSig}>Alina Markova, 2026</span>
           <div className={styles.footerLinks}>
             <a href="https://linkedin.com/in/alinamarkova" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/rsm-amarkova" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/a-markova" target="_blank" rel="noopener">GitHub</a>
             <a href="mailto:alina@markov.com">Email</a>
           </div>
         </div>
