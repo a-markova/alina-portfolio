@@ -503,8 +503,9 @@
   .heroInner { grid-template-columns: 1fr; gap: 2.5rem; }
   .footerInner { flex-wrap: wrap; gap: 0.75rem 1.5rem; }
   .portrait { width: min(320px, 68vw); height: auto; }
-  .catPhoto { right: -18px; bottom: -48px; width: 120px; }
-  .dreamTeam { left: -8px; bottom: -70px; }
+  .heroSection { padding-bottom: 10rem; }
+  .catPhoto { right: -18px; bottom: -118px; width: 120px; }
+  .dreamTeam { left: -8px; bottom: -112px; }
   .dreamTeam span { font-size: 22px; }
   .heroName { font-size: 44px; }
   .eduGrid { grid-template-columns: 1fr; }
