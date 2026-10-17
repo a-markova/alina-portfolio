@@ -24,16 +24,16 @@ export default function Petco() {
           <Link href="/projects" className={styles.back}>← Back to projects</Link>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className={styles.tags}>
-              {['Machine learning', 'SQL', 'Python', 'PyTorch', 'Demand Forecasting'].map(t => (
+              {['Retail Analytics', 'SQL', 'Python', 'Basket Analysis', 'Inventory Planning'].map(t => (
                 <span key={t} className={styles.tag}>{t}</span>
               ))}
             </div>
             <h1 className={styles.heading}>Petco Product Substitution & Demand Transference</h1>
             <p className={styles.subheading}>
-              When a product goes out of stock, where do customers go? We built a demand transference framework for Petco's inventory and planning teams — moving past pure product similarity to model how customer behavior drives substitution.
+              When a product goes out of stock, where does that demand go? We spent a lot of this project looking for the answer in a model, and ended up finding it in how people actually fill their baskets.
             </p>
             <div className={styles.meta}>
-              <span><strong>Type</strong> MSBA Industry Capstone · Team Lead</span>
+              <span><strong>Type</strong> MSBA Industry Capstone · Project Lead</span>
               <span><strong>Partner</strong> Petco</span>
               <span><strong>Team</strong> 4 people</span>
               <span><strong>Timeline</strong> Jan. – Jun. 2026</span>
@@ -51,9 +51,9 @@ export default function Petco() {
           <FadeIn><p className={styles.eyebrow}>Results at a glance</p></FadeIn>
           <div className={styles.resultsGrid}>
             {[
-              { task: 'Baseline improvement', num: '82M', desc: 'improvement over pre-existing baseline assumptions' },
-              { task: 'Team size', num: '4', desc: 'cross-functional team with Petco data scientists' },
-              { task: 'Approach', num: 'Behavior-driven', desc: 'substitution grounded in customer behavior, not just product similarity' },
+              { task: 'Inventory impact', num: '$82M', desc: 'immediate inventory impact from the departments we prioritized' },
+              { task: 'The improvement', num: 'Defensible', desc: 'a prioritization that is clear and supported by numbers, not assumptions' },
+              { task: 'Role', num: 'Project Lead', desc: 'on a 4-person team' },
             ].map((r, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div className={styles.resultCard}>
@@ -76,7 +76,7 @@ export default function Petco() {
           <FadeIn><p className={styles.eyebrow}>The problem</p></FadeIn>
           <FadeIn delay={0.1}>
             <p className={styles.prose}>
-              Petco's existing inventory planning relied on product-level similarity to model demand transference — if a product is out of stock, assume customers migrate to the nearest SKU. But <strong>customers don't think in SKUs</strong>. They think in brands, pack sizes, flavors, and habits. We set out to build a framework that models substitution the way customers actually behave, not the way a product catalog is organized.
+              Petco wanted to understand how demand shifts when products are out of stock, so their inventory and planning teams could prioritize the right things. The tricky part is that you can't see what someone would have bought instead. <strong>All you can observe is what actually ended up in their purchase.</strong>
             </p>
           </FadeIn>
         </div>
@@ -88,28 +88,23 @@ export default function Petco() {
 
       <section className={styles.blushBand}>
         <div className={styles.inner}>
-          <FadeIn><p className={styles.eyebrow}>Our approach</p></FadeIn>
+          <FadeIn><p className={styles.eyebrow}>How it went</p></FadeIn>
           {[
             {
               num: '01',
-              title: 'Literature review & baseline audit',
-              desc: 'We started by grounding the work in substitution research — academic literature on consumer choice, stockout response, and demand transference in retail. This shaped our model design from the start.',
-              methods: ['Substitution theory', 'Consumer behavior research', 'Baseline gap analysis'],
-              finding: 'Existing baseline used pure product-attribute similarity. We found the largest gaps where customer loyalty and pack-size preference mattered more than ingredient overlap.',
+              title: 'Looking for it in a model',
+              desc: "We started where most people would: research on substitution and stockouts, Petco's existing baseline, and product-level data. For a long time we were convinced the solution was in a model somewhere, and we kept looking for the right one.",
+              methods: ['Literature review', 'Baseline review', 'Product attributes'],
+              label: 'Where we got stuck',
+              finding: "The product level was too granular to show a clear pattern. Looking back, we were trying to predict something we couldn't observe. You can't look into someone's head, you can only see what they bought.",
             },
             {
               num: '02',
-              title: 'Behavior-driven feature engineering',
-              desc: 'Rather than relying only on product attributes, we constructed features from observed purchase history — repeat buy rates, brand switching patterns, and cross-category behavior under stockout conditions.',
-              methods: ['Python', 'SQL', 'Feature engineering', 'Transaction data'],
-              finding: 'Brand loyalty was a stronger predictor of substitution direction than product category similarity in pet food and treats segments.',
-            },
-            {
-              num: '03',
-              title: 'Demand transference model',
-              desc: 'We built a model that allocates demand from out-of-stock SKUs to in-stock alternatives, weighted by behavioral signals. Output feeds directly into inventory prioritization and buy decisions.',
-              methods: ['PyTorch', 'Python', 'Cross-validation', 'Inventory planning integration'],
-              finding: 'The framework improved pre-existing baseline assumptions by 82M — a meaningful shift for inventory and markdown planning.',
+              title: 'Basket dominance',
+              desc: "So we went back to the one thing we could observe: purchase orders. We looked at them at the department level and measured how often a department dominated the dollar share of a purchase. The departments that regularly made up most of the basket got prioritized.",
+              methods: ['SQL', 'Python', 'Purchase order data', 'Basket analysis'],
+              label: 'What worked',
+              finding: "Moving up from products to departments is what made the pattern show up. The real improvement over Petco's baseline is that the prioritization is clear, defensible, and supported by numbers. The departments we prioritized carry $82M in immediate inventory impact.",
             },
           ].map((task, i) => (
             <FadeIn key={i} delay={i * 0.1}>
@@ -122,7 +117,7 @@ export default function Petco() {
                     {task.methods.map(m => <span key={m} className={styles.methodPill}>{m}</span>)}
                   </div>
                   <div className={styles.finding}>
-                    <div className={styles.findingLabel}>Key finding</div>
+                    <div className={styles.findingLabel}>{task.label}</div>
                     {task.finding}
                   </div>
                 </div>
@@ -139,12 +134,11 @@ export default function Petco() {
 
       <section className={styles.whiteBand}>
         <div className={styles.inner}>
-          <FadeIn><p className={styles.eyebrow}>What I'd do next</p></FadeIn>
+          <FadeIn><p className={styles.eyebrow}>Where it could go from here</p></FadeIn>
           <div className={styles.takeawayGrid}>
             {[
-              { title: 'Incorporate price elasticity', body: 'Substitution behavior changes when price gaps between alternatives are large. Adding elasticity signals would sharpen the model further.' },
-              { title: 'Test on seasonal categories', body: 'Stockout behavior during peak seasons (holidays, flea season) likely differs from baseline — a seasonal variant would be worth validating.' },
-              { title: 'Close the feedback loop', body: 'Tying model outputs back to realized demand post-stockout would let Petco continuously recalibrate transference weights.' },
+              { title: 'A smaller prediction model', body: "Now that the important departments are narrowed down, the product attributes are a lot more focused. Petco could explore a smaller model from here instead of trying to predict everything at once." },
+              { title: 'What I would tell us at the start', body: "Start with what you can actually observe. We lost a lot of time assuming the answer had to be a model." },
             ].map((t, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div className={styles.takeaway}>

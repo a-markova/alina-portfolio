@@ -7,21 +7,21 @@ import HandMark from './HandMark'
 
 const entries = [
   {
-    title: 'Client & Supplier Reporting',
+    title: 'First In-House BI Tool',
     subtitle: 'Scientist.com · Business Intelligence',
     date: 'Jun 2026',
-    approach: 'Partnered with dev and data science to launch a new reporting tool for clients and suppliers, on schedule. Now building out the reports that show both sides the value of the platform.',
-    methodology: 'Custom HTML visualizations on top of SQL, plus internal tooling that makes reports faster to build, maintain, and scale. Mentored our summer intern through shipping their first supplier reports.',
-    tags: ['BI', 'SQL', 'HTML/CSS/JS', 'Cross-functional', 'Mentorship'],
+    approach: 'Founding member of the BI team. Led cross-functional delivery of the company\'s first in-house BI tool, now the primary reporting source for internal teams, customers, and suppliers.',
+    methodology: 'Partnered with engineering, data science, customer success, and supplier success to turn customer and business needs into requirements, priorities, and a launch plan. I also manage the team\'s intern, scoping projects and reviewing deliverables.',
+    tags: ['BI', 'Requirements', 'Prioritization', 'Cross-functional', 'Intern management'],
     accentTag: 'BI',
   },
   {
-    title: 'AI Savings Validation',
+    title: 'AI Enablement',
     subtitle: 'Scientist.com · AI & Automation',
     date: 'Ongoing',
-    approach: 'Brought AI into the monthly savings validation process, cutting review time by over 70%.',
-    methodology: 'Integrating LLMs to handle the repetitive checks so people only review what needs a human eye. Always on the lookout for the next manual process to automate.',
-    tags: ['AI', 'LLMs', 'Automation', 'Python', 'Process Improvement'],
+    approach: 'Looking for manual work that can be automated. So far that\'s an LLM-assisted review that cut my monthly review time by over 70%, and an API that replaced a 2-hour monthly check for the supplier team.',
+    methodology: 'Scripts handle the numbers, the LLM only helps where judgment is needed, and a person makes the final call. I also built my team an AI knowledge base and help run the monthly AI workshops.',
+    tags: ['AI', 'LLMs', 'APIs', 'Automation', 'Workshops'],
     accentTag: 'AI',
   },
 ]

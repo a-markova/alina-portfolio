@@ -5,10 +5,45 @@ import styles from './archive.module.css'
 
 const entries = [
   {
+    date: 'Ongoing',
+    project: 'AI Enablement Workshops',
+    description: 'Help run company AI workshops at Scientist.com, and sometimes lead the AI enablement session myself.',
+    tags: ['AI Enablement', 'Workshops', 'Teaching'],
+    href: '/projects/ai-enablement',
+  },
+  {
+    date: '2026',
+    project: 'Team AI Knowledge Base',
+    description: 'Built an AI knowledge base for my team out of markdown files, structured so AI tools get the context they need without draining tokens or energy.',
+    tags: ['AI', 'Knowledge Management', 'Markdown'],
+    href: '/projects/ai-enablement',
+  },
+  {
+    date: '2026',
+    project: 'AI Savings Validation',
+    description: 'Integrated LLMs into the monthly savings validation workflow, cutting review time by over 70%.',
+    tags: ['AI', 'LLMs', 'Automation', 'Process Improvement'],
+    href: '/projects/ai-enablement',
+  },
+  {
+    date: '2026',
+    project: 'Supplier Success Automation',
+    description: 'Partnered with the AI enablement and dev teams to replace supplier success\'s monthly manual PDF review with an API. A 2-hour monthly lift now takes seconds.',
+    tags: ['Automation', 'API', 'AI Enablement'],
+    href: '/projects/ai-enablement',
+  },
+  {
+    date: '2026',
+    project: 'Internal & External BI Tools',
+    description: 'Launched Scientist.com\'s first in-house BI tools: reporting for internal teams, plus external reporting for customers and suppliers.',
+    tags: ['BI', 'SQL', 'Cross-functional', 'Launch'],
+    href: '/projects/scientist-bi',
+  },
+  {
     date: 'Mid 2026',
     project: 'Petco Product Substitution Model',
-    description: 'MSBA capstone. Demand transference framework for inventory planning; improved baseline assumptions by 82M.',
-    tags: ['ML', 'Python', 'SQL', 'Capstone'],
+    description: 'MSBA capstone. Prioritized departments by basket dominance, a clear and defensible approach with $82M in immediate inventory impact.',
+    tags: ['SQL', 'Python', 'Basket Analysis', 'Capstone'],
     href: '/projects/petco',
   },
   {
@@ -19,18 +54,18 @@ const entries = [
     href: '/projects/variance-agent',
   },
   {
+    date: 'Spring 2026',
+    project: 'Ad Targeting Uplift Model',
+    description: 'Causal ML to identify persuadables and maximize ad ROI.',
+    tags: ['XGBoost', 'Polars', 'RCT'],
+    href: '/projects/uplift-model',
+  },
+  {
     date: 'Early 2026',
     project: 'Rent the Runway ML',
     description: 'Sentiment, event type, and fit prediction on 190k+ reviews.',
     tags: ['NLP', 'scikit-learn', 'Python'],
     href: '/projects/rent-the-runway',
-  },
-  {
-    date: 'Early 2026',
-    project: 'Uplift Modeling — Creative Gaming',
-    description: 'Causal ML to identify persuadables and maximize ad ROI.',
-    tags: ['XGBoost', 'Polars', 'RCT'],
-    href: '/projects/uplift-model',
   },
 ]
 
@@ -47,7 +82,9 @@ function Row({ entry, i }) {
     >
       <td className={styles.tdDate}>{entry.date}</td>
       <td className={styles.tdProject}>
-        <a href={entry.href} className={styles.projectLink}>{entry.project}</a>
+        {entry.href
+          ? <a href={entry.href} className={styles.projectLink}>{entry.project}</a>
+          : <span className={styles.projectLink}>{entry.project}</span>}
         <span className={styles.projectDesc}>{entry.description}</span>
       </td>
       <td className={styles.tdTags}>

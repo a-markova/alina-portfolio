@@ -8,19 +8,19 @@ import HandMark from './HandMark'
 // Order = chronological. First item = top-left start.
 const events = [
   { id: 'born', date: 'May 2002', title: 'Born', type: 'life', size: 'large',
-    desc: 'Happy childhood, loving family!' },
+    desc: 'A happy childhood with a loving family.' },
   { id: 'undergrad', date: 'Sep 2021', title: 'Started at UC San Diego', type: 'school', size: 'large', img: '/images/timeline/undergrad.jpg', pos: '40% 62%',
-    desc: 'I explored a lot of majors before landing on Economics. The department gave me flexibility to pursue data analytics, finance, and even some dance!' },
-  { id: 'internships', date: '2024', title: 'The Internship Era', type: 'work', size: 'medium', img: '/images/timeline/internships.jpg', pos: '0% 50%',
-    desc: 'Getting to try on as many hats as I want. Wealth Management, Consulting, and FP&A. My favorite part was the people I got to meet.' },
+    desc: 'I explored a lot of majors before landing on Economics. The department gave me room to pursue data analytics and finance, with some dance on the side.' },
+  { id: 'internships', date: '2024', title: 'Internships', type: 'work', size: 'medium', img: '/images/timeline/internships.jpg', pos: '0% 50%',
+    desc: 'A chance to try a few different paths: wealth management, consulting, and FP&A. The best part was the people I met along the way.' },
   { id: 'ta', date: 'Mar 2024', title: 'Teaching Assistant', type: 'work', size: 'large', img: '/images/timeline/ta.jpg', pos: '35% 40%',
-    desc: 'My gateway to grad school, debt-free. The most schemed-out chapter of my life: 800 hours of TAing, and I negotiated my fees to come out net positive.' },
+    desc: 'My path to grad school without debt. About 800 hours of TAing, plus some careful negotiating on fees, meant I came out net positive.' },
   { id: 'grad-bs', date: 'Jun 2025', title: 'Graduated: BS Economics', type: 'school', size: 'large', img: '/images/timeline/grad-bs.jpg', pos: '50% 22%',
-    desc: 'Graduation came up unexpectedly! Good thing I was headed right back into school.' },
+    desc: 'Graduation came up faster than I expected, which worked out since I was heading right back into school.' },
   { id: 'msba', date: 'Jul 2025', title: 'UC San Diego Grad School', type: 'school', size: 'large', img: ['/images/timeline/grad-bs.jpg', '/images/timeline/msba.jpg'], pos: ['50% 22%', '50% 45%'], badge: 'x2',
-    desc: "What a time. I think anyone you ask about grad school will start with a sigh. Then, hopefully, they'll say it was all worth it <3" },
-  { id: 'business-analyst', date: 'Jun 2026', title: 'Business Analyst', type: 'work', size: 'large', img: '/images/timeline/scientist-fpa.jpg', pos: '45% 50%', badge: 'x2',
-    desc: 'Here I am today: a business analyst at a company I love, adding to my skillset while working toward a mission I respect.', current: true },
+    desc: "Anyone you ask about grad school will probably start with a sigh, and then, hopefully, tell you it was worth it. For me, it was." },
+  { id: 'business-analyst', date: 'Jun 2026', title: 'Business Intelligence Analyst', type: 'work', size: 'large', img: '/images/timeline/scientist-fpa.jpg', pos: '45% 50%', badge: 'x2',
+    desc: 'Where I am now: a business intelligence analyst at a company I love, building my skills while working toward a mission I believe in.', current: true },
 ]
 
 const COLORS = { life: '#a3020c', school: '#4A7C6F', work: '#6B1A2A' }

@@ -28,14 +28,14 @@ export default function ScientistBI() {
                 <span key={t} className={styles.tag}>{t}</span>
               ))}
             </div>
-            <h1 className={styles.heading}>Scientist.com's First Custom BI Reports</h1>
+            <h1 className={styles.heading}>Scientist.com's First In-House BI Tool</h1>
             <p className={styles.subheading}>
-              Scientist.com's suppliers had never seen their own data on the platform. We built the first custom reporting experience from the ground up — procurement dashboards for customers and digital reporting for suppliers that gave them a real window into their platform activity for the first time.
+              Scientist.com's suppliers had never seen their own data on the platform. We built the company's first in-house BI tool from the ground up: procurement dashboards for customers and digital reporting for suppliers. Today it's the primary reporting source for internal teams, customers, and suppliers.
             </p>
             <div className={styles.meta}>
               <span><strong>Type</strong> Business Intelligence · Product</span>
               <span><strong>Company</strong> Scientist.com</span>
-              <span><strong>Role</strong> Business Analyst — end-to-end ownership</span>
+              <span><strong>Role</strong> Business Intelligence Analyst · led cross-functional delivery</span>
               <span><strong>Launched</strong> 2026</span>
             </div>
           </motion.div>
@@ -51,9 +51,9 @@ export default function ScientistBI() {
           <FadeIn><p className={styles.eyebrow}>Impact at a glance</p></FadeIn>
           <div className={styles.resultsGrid}>
             {[
-              { task: 'First ever', num: 'Custom BI', desc: 'Scientist.com\'s first custom reporting experience for customers and suppliers' },
+              { task: 'Adoption', num: 'Primary source', desc: 'Now the main reporting source for internal teams, customers, and suppliers' },
               { task: 'Supplier milestone', num: 'Digital-first', desc: 'Gave suppliers their first view of procurement and spend data on the platform' },
-              { task: 'Scope', num: 'End-to-end', desc: 'Requirements, data modeling, dev collaboration, and stakeholder delivery' },
+              { task: 'Scope', num: 'End-to-end', desc: 'Requirements, priorities, and launch plan across engineering, data science, customer success, and supplier success' },
             ].map((r, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div className={styles.resultCard}>
@@ -76,7 +76,7 @@ export default function ScientistBI() {
           <FadeIn><p className={styles.eyebrow}>The problem</p></FadeIn>
           <FadeIn delay={0.1}>
             <p className={styles.prose}>
-              Scientist.com is a marketplace for scientific research — connecting biotech and pharma clients with suppliers worldwide. Before this project, <strong>neither side had visibility into their own activity on the platform.</strong> Customers couldn't see procurement status or spend trends. Suppliers had no digital window into orders, volume, or platform engagement. Reporting was ad-hoc, manual, and slow. I was brought in as the founding analytics hire to change that.
+              Scientist.com is a marketplace for scientific research — connecting biotech and pharma clients with suppliers worldwide. Before this project, <strong>neither side had visibility into their own activity on the platform.</strong> Customers couldn't see procurement status or spend trends. Suppliers had no digital window into orders, volume, or platform engagement. Reporting was ad-hoc, manual, and slow. As a founding member of the BI team, I led the cross-functional effort to change that.
             </p>
           </FadeIn>
         </div>

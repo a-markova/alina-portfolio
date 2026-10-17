@@ -78,7 +78,7 @@ export default function Resume() {
 
                 <div className={styles.coursework}>
                   <span className={styles.courseworkLabel}>Relevant coursework</span>
-                  AI Powered Customer Analytics · Agentic AI · Business Intelligence Systems · Scalable Analytics · Web Mining & Recommender Systems · Project Management
+                  Project Management · Business Intelligence Systems · AI-Enabled Customer Analytics · Agentic AI · Web Mining & Recommender Systems
                 </div>
 
               </div>
@@ -94,7 +94,7 @@ export default function Resume() {
                 <div className={styles.entry}>
                   <div className={styles.entryHeader}>
                     <div>
-                      <div className={styles.entryTitle}>Business Analyst</div>
+                      <div className={styles.entryTitle}>Business Intelligence Analyst</div>
                       <div className={styles.entryOrg}>Scientist.com</div>
                     </div>
                     <div className={styles.entryMeta}>
@@ -103,11 +103,11 @@ export default function Resume() {
                     </div>
                   </div>
                   <ul className={styles.bullets}>
-                    <li>Partnered with dev and data science to launch a new reporting tool for clients and suppliers, delivered on schedule.</li>
-                    <li>Built custom HTML visualizations and internal tools that streamline how reports are developed, maintained, and scaled.</li>
-                    <li>Integrated AI/LLMs into the savings validation process, cutting monthly review time by over 70%.</li>
-                    <li>Created new client and supplier reports that demonstrate platform value and support growth.</li>
-                    <li>Mentored a summer intern through delivering their first supplier reports.</li>
+                    <li>Founding member of the BI team; led cross-functional delivery of the company's first in-house BI tool, now the primary reporting source for internal teams, customers, and suppliers.</li>
+                    <li>Partnered with engineering, data science, customer success, and supplier success to turn customer and business needs into requirements, priorities, and a launch plan.</li>
+                    <li>Integrated LLMs into the savings validation workflow, cutting monthly review time by over 70%.</li>
+                    <li>Identified a 2-hour monthly manual PDF review on the supplier success team; partnered with AI enablement and engineering to replace it with an API that runs in seconds.</li>
+                    <li>Manage the team's intern, scoping projects and reviewing deliverables.</li>
                   </ul>
                 </div>
 
@@ -123,8 +123,8 @@ export default function Resume() {
                     </div>
                   </div>
                   <ul className={styles.bullets}>
-                    <li>Created SQL-powered executive dashboards translating financial and operational data into decision-ready insights for leadership.</li>
-                    <li>Assisted in building multi-year revenue and budget forecasts in Adaptive Insights in support of an upcoming transaction.</li>
+                    <li>Supported multi-year revenue and budget forecasts in Adaptive Insights ahead of a company transaction.</li>
+                    <li>Built SQL-powered executive summaries that gave leadership decision-ready views of financial and operational performance.</li>
                   </ul>
                 </div>
 
@@ -140,8 +140,8 @@ export default function Resume() {
                     </div>
                   </div>
                   <ul className={styles.bullets}>
-                    <li>Analyzed market, competitor, and channel performance for EdTech clients, contributing to a 19% reduction in marketing costs.</li>
-                    <li>Led user testing across acquisition and onboarding stages, increasing positive engagement by 22%.</li>
+                    <li>Led user testing across acquisition and onboarding with 4 schools, turning findings into UX changes that raised positive engagement by 22%.</li>
+                    <li>Analyzed market, competitor, and channel performance to shape an EdTech product launch, cutting marketing costs by 19%.</li>
                   </ul>
                 </div>
 
@@ -155,11 +155,9 @@ export default function Resume() {
               <div className={styles.sectionLabel}>Skills & Competencies</div>
               <div className={styles.skillsGrid}>
                 {[
-                  { label: 'Programming & Data', value: 'Python (pandas, polars, seaborn, numpy, sklearn, pyspark) · SQL · R · Snowflake · HTML/CSS/JS' },
-                  { label: 'AI & Automation', value: 'LLM Integration · AI Agents · Prompt Engineering · Claude Code · Workflow & Report Automation' },
-                  { label: 'BI & Analytics', value: 'Power BI · Tableau · Apache Superset · A/B Testing · Google Analytics' },
-                  { label: 'Enterprise & Finance', value: 'NetSuite · Workday Adaptive Planning · Salesforce' },
-                  { label: 'Decision Support', value: 'Excel (Advanced) · Adaptive Insights · Bloomberg' },
+                  { label: 'Product', value: 'Requirements gathering · Stakeholder management · Prioritization · User testing · A/B testing · Prototyping' },
+                  { label: 'Technical', value: 'SQL · Python · Snowflake · HTML/CSS/JS · LLM integration & AI agents' },
+                  { label: 'Tools', value: 'Apache Superset · Power BI · Tableau · GitHub · Slack · Salesforce · HubSpot · NetSuite · Google Analytics · Excel' },
                 ].map((s, i) => (
                   <div key={i} className={styles.skillRow}>
                     <span className={styles.skillLabel}>{s.label}</span>
@@ -181,7 +179,7 @@ export default function Resume() {
                     <div>
                       <div className={styles.entryTitle}>
                         Petco Product Substitution & Demand Transference
-                        <span className={styles.entryTag}>MSBA Industry Capstone — Team Lead</span>
+                        <span className={styles.entryTag}>Capstone · Project Lead</span>
                       </div>
                     </div>
                     <div className={styles.entryMeta}>
@@ -189,8 +187,8 @@ export default function Resume() {
                     </div>
                   </div>
                   <ul className={styles.bullets}>
-                    <li>Led a 4-person team designing a demand transference framework for Petco's inventory and planning teams.</li>
-                    <li>Architected a new method for stock prioritization improving pre-existing baseline assumptions by 82M.</li>
+                    <li>Led a 4-person team building a demand transference framework for Petco's inventory and planning teams.</li>
+                    <li>Designed a clear, data-backed stock prioritization method based on basket dominance, with $82M in immediate inventory impact.</li>
                   </ul>
                 </div>
 
@@ -198,17 +196,16 @@ export default function Resume() {
                   <div className={styles.entryHeader}>
                     <div>
                       <div className={styles.entryTitle}>
-                        Variance Intelligence Agent
-                        <span className={styles.entryTag}>Live Nation</span>
+                        Ad Targeting Uplift Model
+                        <span className={styles.entryTag}>Creative Gaming</span>
                       </div>
                     </div>
                     <div className={styles.entryMeta}>
-                      <span className={styles.entryDate}>Jan. – Jun. 2026</span>
+                      <span className={styles.entryDate}>Mar. – Jun. 2026</span>
                     </div>
                   </div>
                   <ul className={styles.bullets}>
-                    <li>Designed an agentic pipeline for post-event performance reporting, automating comparison of projections against actuals.</li>
-                    <li>Built an LLM-orchestrated reasoning loop combining structured SQL results with web search to explain forecast misses.</li>
+                    <li>Analyzed a 120K-user randomized ad experiment and built uplift models to identify which users ads actually persuade; targeting the top 25% maximized incremental profit versus a conversion-based approach.</li>
                   </ul>
                 </div>
 
@@ -222,13 +219,13 @@ export default function Resume() {
               <div className={styles.sectionLabel}>Leadership & Recognition</div>
               <div className={styles.leadershipList}>
                 {[
-                  { title: 'Robert S. Sullivan Award for Exemplary Leadership', desc: 'Awarded by the UCSD Rady School of Management MSBA program.' },
-                  { title: 'MSBA Cohort Representative', desc: 'Voice of a 160-member cohort, working with faculty to advocate for student needs and career-focused initiatives.' },
-                  { title: 'Teaching Assistant', desc: 'Supported coursework and provided tutoring to reinforce quantitative and analytical concepts.' },
+                  { title: 'Robert S. Sullivan Award for Exemplary Leadership', desc: 'Awarded by the UCSD Rady School of Management.' },
+                  { title: 'MSBA Cohort Representative', desc: 'Voice of a 160-member cohort, working with faculty on student needs.' },
+                  { title: 'Teaching Assistant, UCSD (2 years)', desc: 'Business in Healthcare, Ethics of Accounting, Financial Statement Analysis.' },
                 ].map((l, i) => (
                   <div key={i} className={styles.leadershipItem}>
                     <span className={styles.leadershipTitle}>{l.title}</span>
-                    <span className={styles.leadershipDesc}> — {l.desc}</span>
+                    <span className={styles.leadershipDesc}>: {l.desc}</span>
                   </div>
                 ))}
               </div>

@@ -90,7 +90,7 @@
   transition: color 0.2s;
 }
 
-.projectLink:hover { color: var(--red); }
+a.projectLink:hover { color: var(--red); }
 
 .projectDesc {
   font-size: 12px;

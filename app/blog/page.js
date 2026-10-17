@@ -6,22 +6,20 @@ import styles from './blog.module.css'
 
 const posts = [
   {
-    slug: 'poisson-regression',
-    date: 'May 27, 2026',
-    title: 'Poisson Regression and Maximum Likelihood Estimation',
-    description: 'Does Blueprinty\'s software help engineering firms win more patents? A case study using Poisson regression and MLE on 1,500 firms.',
-    tags: ['Statistics', 'Python', 'ML'],
-    href: 'http://alina.markov.com/blog/poisson-regression/',
-    external: true,
-  },
-  {
     slug: 'max-diff',
-    date: 'May 13, 2026',
+    date: 'May 27, 2026',
     title: 'MaxDiff Analysis of MSBA Class Preferences',
     description: 'Using MaxDiff surveys to understand how MSBA students rank their elective preferences.',
     tags: ['Survey analysis', 'MaxDiff'],
-    href: 'http://alina.markov.com/blog/max_diff/',
-    external: true,
+    href: '/blog/max-diff',
+  },
+  {
+    slug: 'poisson-regression',
+    date: 'May 17, 2026',
+    title: 'Poisson Regression and Maximum Likelihood Estimation',
+    description: 'Does Blueprinty\'s software help engineering firms win more patents? A case study using Poisson regression and MLE on 1,500 firms.',
+    tags: ['Statistics', 'Python', 'ML'],
+    href: '/blog/poisson-regression',
   },
   {
     slug: 'diff-diff',
@@ -29,17 +27,15 @@ const posts = [
     title: 'Replication of Card and Krueger (1994)',
     description: 'Does raising the minimum wage kill jobs? Replicating a landmark difference-in-differences study.',
     tags: ['Statistics', 'Econometrics'],
-    href: 'http://alina.markov.com/blog/diff_diff/',
-    external: true,
+    href: '/blog/diff-diff',
   },
   {
     slug: 'ab-testing',
     date: 'Apr 15, 2026',
     title: 'A/B Testing a Call to Action',
-    description: 'Classical frequentist statistics via simulation — using a website CTA A/B test as the context.',
+    description: 'Classical frequentist statistics via simulation, using a website CTA A/B test as the example.',
     tags: ['Statistics', 'Simulation', 'Bayesian'],
-    href: 'http://alina.markov.com/blog/ab_testing/',
-    external: true,
+    href: '/blog/ab-testing',
   },
 ]
 

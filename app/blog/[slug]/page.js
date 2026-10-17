@@ -7,10 +7,27 @@ import styles from './post.module.css'
 import 'katex/dist/katex.min.css'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import remarkGfm from 'remark-gfm'
+
+const POSTS_DIR = path.join(process.cwd(), 'content/blog')
+
+// One page per .mdx file; any other slug is a 404
+export async function generateStaticParams() {
+  return fs.readdirSync(POSTS_DIR)
+    .filter(f => f.endsWith('.mdx'))
+    .map(f => ({ slug: f.replace(/\.mdx$/, '') }))
+}
+export const dynamicParams = false
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params
+  const { data } = matter(fs.readFileSync(path.join(POSTS_DIR, `${slug}.mdx`), 'utf-8'))
+  return { title: `${data.title} · Alina Markova`, description: data.subtitle }
+}
 
 export default async function BlogPost({ params }) {
   const { slug } = await params
-  const filePath = path.join(process.cwd(), 'content/blog', `${slug}.mdx`)
+  const filePath = path.join(POSTS_DIR, `${slug}.mdx`)
   const raw = fs.readFileSync(filePath, 'utf-8')
   const { content, data } = matter(raw)
 
@@ -28,6 +45,7 @@ export default async function BlogPost({ params }) {
             </div>
           </div>
           <h1 className={styles.heading}>{data.title}</h1>
+          {data.subtitle && <p className={styles.subheading}>{data.subtitle}</p>}
         </div>
       </section>
 
@@ -41,7 +59,7 @@ export default async function BlogPost({ params }) {
             source={content}
             options={{
               mdxOptions: {
-                remarkPlugins: [remarkMath],
+                remarkPlugins: [remarkGfm, remarkMath],
                 rehypePlugins: [rehypeKatex],
               }
             }}

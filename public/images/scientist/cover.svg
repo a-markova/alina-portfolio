@@ -20,5 +20,5 @@
   <rect x="350" y="70" width="40" height="140" fill="#E8173A" opacity="0.8"/>
   <rect x="410" y="55" width="40" height="155" fill="#E8173A" opacity="0.9"/>
   <!-- Label -->
-  <text x="300" y="248" font-family="Georgia, serif" font-size="13" fill="#6B1A2A" text-anchor="middle" opacity="0.7">Scientist.com · Custom BI Reports</text>
+  <text x="300" y="248" font-family="Georgia, serif" font-size="13" fill="#6B1A2A" text-anchor="middle" opacity="0.7">Scientist.com · In-House BI Tool</text>
 </svg>

@@ -29,7 +29,7 @@ export default function About() {
       {/* ── HERO ── */}
       <section className={styles.heroSection} style={{ position: 'relative' }}>
         <GaudyFrame src="/images/paintings/dusk.jpg" alt="Painting of a stormy sky over a meadow" caption="stormy sky" variant="silver" side="left" top="110px" tilt={-3} />
-        <GaudyFrame src="/images/paintings/wave.jpg" alt="Painting of a wave crashing on a rocky shore" caption="the wave" price="$8" sold variant="gold" side="right" top="200px" tilt={2.5} />
+        <GaudyFrame src="/images/paintings/wave.jpg" alt="Painting of a wave crashing on a rocky shore" caption="the wave" variant="gold" side="right" top="200px" tilt={2.5} />
         <div className={styles.heroInner}>
           <motion.div
             className={styles.heroLeft}
@@ -39,8 +39,8 @@ export default function About() {
           >
             <p className={styles.eyebrow}><HandMark kind="line">About me</HandMark></p>
             <h1 className={styles.heroName}>
-              Data worker.<br />
-              <em className={styles.accent}>with hobbies</em>
+              Data,<br />
+              <em className={styles.accent}>etc.</em>
             </h1>
             <p className={styles.heroBio}>
               At work, I'm pulling data for internal teams, building reporting for external ones, and dabbling in data science and dev. My favorite part is connecting all the teams it takes to get a project across the finish line.
@@ -66,6 +66,20 @@ export default function About() {
                 priority
               />
               <div className={styles.portraitAccent} />
+              <Image
+                src="/images/cats/dream-team.jpg"
+                alt="My two tabby cats looking out the window"
+                width={675}
+                height={900}
+                className={styles.catPhoto}
+              />
+              <div className={styles.dreamTeam} aria-hidden="true">
+                <span>my dream team</span>
+                <svg viewBox="0 0 90 60" fill="none">
+                  <path d="M6 52 C30 54 60 44 78 14" />
+                  <path d="M66 18 L79 12 L81 26" />
+                </svg>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -85,8 +99,8 @@ export default function About() {
           <div className={styles.eduGrid}>
             {[
               {
-                degree: 'MS Business Analytics (STEM)',
-                school: 'UC San Diego — Rady School of Management',
+                degree: 'MS Business Analytics, Spec. in ML & AI',
+                school: 'UC San Diego, Rady School of Management',
                 year: 'June 2026',
                 note: 'Cohort Representative, Sullivan Award Recipient',
               },
@@ -94,7 +108,7 @@ export default function About() {
                 degree: 'BS Business Economics',
                 school: 'UC San Diego',
                 year: 'June 2025',
-                note: 'Focus in Finance and Data Analytics',
+                note: 'Minor in Finance',
               },
             ].map((e, i) => (
               <FadeIn key={i} delay={i * 0.1}>

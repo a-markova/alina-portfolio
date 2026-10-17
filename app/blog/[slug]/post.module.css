@@ -53,6 +53,15 @@
   max-width: 640px;
 }
 
+.subheading {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  max-width: 640px;
+}
+
 .body {
   background: var(--blush);
   padding: 3.5rem 2.5rem;
@@ -64,6 +73,16 @@
   font-size: 15px;
   line-height: 1.85;
   color: var(--text-muted);
+  /* a white page on the blush band, so long posts are easier to read */
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 6px 24px rgba(107, 26, 42, 0.06);
+}
+@media (max-width: 720px) {
+  .body { padding: 2rem 1rem; }
+  .prose { padding: 1.5rem 1.25rem; }
 }
 
 .prose h2 {
@@ -153,6 +172,43 @@
   border-top: 1px solid var(--border);
   margin: 2rem 0;
 }
+
+/* folded code cells, like Quarto's code-fold */
+.prose details {
+  margin: 1rem 0 0.5rem;
+  border-left: 2px solid var(--blush2, #f2d9d0);
+  padding-left: 0.85rem;
+}
+.prose summary {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+  width: fit-content;
+}
+.prose details pre { margin-top: 0.6rem; }
+
+/* tables (summary stats, results) scroll sideways on phones instead of the page */
+.prose table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 14px;
+}
+.prose th, .prose td {
+  padding: 0.45rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+.prose th { font-weight: 600; border-bottom: 1.5px solid var(--red); }
+
+/* long equations scroll instead of overflowing */
+.prose :global(.katex-display) { overflow-x: auto; overflow-y: hidden; padding: 0.25rem 0; }
 
 .footer {
   background: var(--blush);
