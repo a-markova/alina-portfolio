@@ -34,3 +34,7 @@
 }
 
 .links a:hover { color: var(--red); }
+@media (max-width: 720px) {
+  .footer { padding: 1.5rem 1rem; }
+  .inner { flex-wrap: wrap; gap: 0.75rem 1.5rem; }
+}

@@ -60,3 +60,25 @@
   background: var(--red);
   color: white;
 }
+/* Phones: name + icons on top, page links on a second row that swipes sideways */
+@media (max-width: 760px) {
+  .nav {
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem 0;
+    row-gap: 0.4rem;
+  }
+  .name { font-size: 18px; }
+  .icons { gap: 6px; }
+  .icon { width: 30px; height: 30px; }
+  .links {
+    order: 3;
+    width: 100%;
+    gap: 0.65rem;
+    justify-content: space-between;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 0.35rem 0 0.6rem;
+  }
+  .links::-webkit-scrollbar { display: none; }
+  .links a { white-space: nowrap; flex-shrink: 0; letter-spacing: 0.06em; font-size: 10.5px; }
+}
