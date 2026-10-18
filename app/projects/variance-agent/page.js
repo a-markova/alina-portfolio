@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import styles from './project.module.css'
+import Signature from '../../components/Signature'
 
 function FadeIn({ children, delay = 0 }) {
   const ref = useRef(null)
@@ -30,11 +31,11 @@ export default function VarianceAgent() {
             </div>
             <h1 className={styles.heading}>Variance Intelligence Agent</h1>
             <p className={styles.subheading}>
-              Post-event finance reporting is manual, slow, and misses context. This agentic pipeline for Live Nation automatically compares projections to actuals — and explains why they diverged, using both internal data and the open web.
+              Post-event finance reporting is manual, slow, and misses context. This agentic pipeline for a live entertainment company compares projections to actuals and explains why they diverged, using both internal data and the open web.
             </p>
             <div className={styles.meta}>
               <span><strong>Type</strong> AI Agent · Analytics Engineering</span>
-              <span><strong>Client</strong> Live Nation</span>
+              <span><strong>Client</strong> Live entertainment company</span>
               <span><strong>Timeline</strong> Jan. – Jun. 2026</span>
             </div>
           </motion.div>
@@ -75,7 +76,7 @@ export default function VarianceAgent() {
           <FadeIn><p className={styles.eyebrow}>The problem</p></FadeIn>
           <FadeIn delay={0.1}>
             <p className={styles.prose}>
-              After every event, Live Nation's finance team has to explain why revenue came in above or below forecast. That process is manual: pull actuals from SQL, compare to projections in a spreadsheet, then search for context (weather, competing events, ticket sales timing) to explain the gaps. <strong>The analysis takes hours. The LLM can do it in seconds.</strong> We built an agentic pipeline that runs this reasoning loop automatically — querying structured data and external sources — and writes a variance explanation you can actually use.
+              After every event, the company's finance team has to explain why revenue came in above or below forecast. That process is manual: pull actuals from SQL, compare to projections in a spreadsheet, then search for context (weather, competing events, ticket sales timing) to explain the gaps. <strong>The analysis takes hours. The LLM can do it in seconds.</strong> We built an agentic pipeline that runs this reasoning loop automatically — querying structured data and external sources — and writes a variance explanation you can actually use.
             </p>
           </FadeIn>
         </div>
@@ -141,7 +142,7 @@ export default function VarianceAgent() {
           <FadeIn><p className={styles.eyebrow}>What I'd do next</p></FadeIn>
           <div className={styles.takeawayGrid}>
             {[
-              { title: 'Add cost constraint modeling', body: 'Right now the agent explains variance. A natural extension is forecasting: given current signals, what should we expect next quarter?' },
+              { title: 'Add forecasting', body: 'Right now the agent explains variance. A natural extension is forecasting: given current signals, what should we expect next quarter?' },
               { title: 'Structured citation output', body: 'Finance teams need to trust the explanations. Adding source citations for each claim would make the output auditable and presentation-ready.' },
               { title: 'Human-in-the-loop review', body: 'High-stakes variance explanations should have a review step before they reach a stakeholder. Building an approval workflow would be the next production milestone.' },
             ].map((t, i) => (
@@ -158,7 +159,7 @@ export default function VarianceAgent() {
 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerSig}>Alina Markova, 2026</span>
+          <Signature year={2026} />
           <Link href="/projects" className={styles.footerBack}>← All projects</Link>
         </div>
       </footer>

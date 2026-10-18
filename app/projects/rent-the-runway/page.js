@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import styles from './project.module.css'
+import Signature from '../../components/Signature'
 
 function FadeIn({ children, delay = 0 }) {
   const ref = useRef(null)
@@ -171,7 +172,7 @@ export default function RentTheRunway() {
 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerSig}>Alina Markova, 2026</span>
+          <Signature year={2026} />
           <Link href="/projects" className={styles.footerBack}>← All projects</Link>
         </div>
       </footer>

@@ -2,6 +2,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import styles from './archive.module.css'
+import Signature from '../components/Signature'
 
 const entries = [
   {
@@ -49,7 +50,7 @@ const entries = [
   {
     date: 'Mid 2026',
     project: 'Variance Intelligence Agent',
-    description: 'Agentic pipeline for Live Nation comparing revenue projections to actuals with LLM-generated explanations.',
+    description: 'Agentic pipeline for a live entertainment company comparing revenue projections to actuals with LLM-generated explanations.',
     tags: ['AI Agent', 'LLM', 'Python', 'SQL'],
     href: '/projects/variance-agent',
   },
@@ -61,7 +62,7 @@ const entries = [
     href: '/projects/uplift-model',
   },
   {
-    date: 'Early 2026',
+    date: 'Nov. 2025',
     project: 'Rent the Runway ML',
     description: 'Sentiment, event type, and fit prediction on 190k+ reviews.',
     tags: ['NLP', 'scikit-learn', 'Python'],
@@ -140,7 +141,7 @@ export default function Archive() {
 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerSig}>Alina Markova, 2026</span>
+          <Signature year={2026} />
           <div className={styles.footerLinks}>
             <a href="https://linkedin.com/in/alinamarkova" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://github.com/a-markova" target="_blank" rel="noopener">GitHub</a>

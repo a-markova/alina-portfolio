@@ -9,8 +9,8 @@ const signature = Mrs_Saint_Delafield({ weight: '400', subsets: ['latin'], varia
 const hand = Caveat({ weight: ['400', '600'], subsets: ['latin'], variable: '--font-hand' })
 
 export const metadata = {
-  title: 'Alina Markova',
-  description: 'Data analytics, business, and strategy.',
+  title: { default: 'Alina Markova', template: '%s | Alina Markova' },
+  description: 'Business intelligence analyst at Scientist.com, a life sciences research marketplace, working toward product management.',
 }
 
 export default function RootLayout({ children }) {

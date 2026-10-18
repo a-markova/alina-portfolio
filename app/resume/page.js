@@ -2,6 +2,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import styles from './resume.module.css'
+import Signature from '../components/Signature'
 
 function FadeIn({ children, delay = 0 }) {
   const ref = useRef(null)
@@ -114,7 +115,7 @@ export default function Resume() {
                 <div className={styles.entry}>
                   <div className={styles.entryHeader}>
                     <div>
-                      <div className={styles.entryTitle}>Financial Planner & Analyst Intern</div>
+                      <div className={styles.entryTitle}>Financial Planning & Analysis (FP&A) Intern</div>
                       <div className={styles.entryOrg}>Scientist.com</div>
                     </div>
                     <div className={styles.entryMeta}>
@@ -183,7 +184,7 @@ export default function Resume() {
                       </div>
                     </div>
                     <div className={styles.entryMeta}>
-                      <span className={styles.entryDate}>Jan. – Jun. 2026</span>
+                      <span className={styles.entryDate}>Mar. – Jun. 2026</span>
                     </div>
                   </div>
                   <ul className={styles.bullets}>
@@ -237,7 +238,7 @@ export default function Resume() {
 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerSig}>Alina Markova, 2026</span>
+          <Signature year={2026} />
           <a href="/files/resume.pdf" download className={styles.footerDownload}>Download PDF ↓</a>
         </div>
       </footer>

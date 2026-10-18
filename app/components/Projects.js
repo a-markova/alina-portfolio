@@ -9,8 +9,8 @@ const projects = [
   {
     type: 'Business Intelligence · Product',
     title: 'Scientist.com In-House BI Tool',
-    desc: 'Led cross-functional delivery of the company\'s first in-house BI tool, now the primary reporting source for internal teams, customers, and suppliers.',
-    chips: ['SQL', 'Data Modeling', 'BI', 'Product'],
+    desc: 'Took Scientist.com\'s first in-house BI tool from stakeholder interviews and requirements to launch. It\'s now the main reporting source for internal teams, biotech and pharma customers, and suppliers.',
+    chips: ['Product', 'Requirements', 'BI', 'SQL'],
     href: '/projects/scientist-bi',
   },
   {
@@ -30,7 +30,7 @@ const projects = [
   {
     type: 'AI Agent · Analytics Engineering',
     title: 'Variance Intelligence Agent',
-    desc: 'Agentic pipeline for Live Nation that compares revenue projections to actuals and autonomously surfaces explanations using LLMs and web search.',
+    desc: 'Agentic pipeline for a live entertainment company that compares revenue projections to actuals and autonomously surfaces explanations using LLMs and web search.',
     chips: ['Python', 'LLM', 'SQL', 'RAG'],
     href: '/projects/variance-agent',
   },

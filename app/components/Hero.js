@@ -33,7 +33,7 @@ export default function Hero() {
         {/* LEFT column */}
         <div>
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0}>
-            <p className={styles.eyebrow}>Data analytics · Business · Strategy</p>
+            <p className={styles.eyebrow}>Product · Analytics · Life Sciences</p>
             <h1 className={styles.name}>
               Alina<br /><em className={styles.nameAccent}>Markova</em>
             </h1>
@@ -86,7 +86,7 @@ export default function Hero() {
           <div className={styles.statGrid}>
             {[
               { num: 'Cross-Functional Experience', label: 'Analytics, Reporting, Consulting' },
-              { num: '3 Years of Experience', label: 'Founding member of Business Intelligence team @ Scientist.com' },
+              { num: '2+ Years of Experience', label: 'Founding member of Business Intelligence team @ Scientist.com' },
               { num: 'Biotech & Pharma', label: '' },
               { num: 'East of Eden', label: 'Book of the month' },
             ].map((s, i) => (

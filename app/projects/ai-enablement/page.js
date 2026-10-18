@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import styles from './project.module.css'
+import Signature from '../../components/Signature'
 
 function FadeIn({ children, delay = 0 }) {
   const ref = useRef(null)
@@ -93,7 +94,7 @@ export default function AIEnablement() {
             {
               num: '01',
               title: 'The supplier subscription checklist',
-              desc: "I was working with the supplier success team on a reporting project that involved supplier subscriptions. When I asked how they kept track of who had what, they showed me a checklist where they added a checkmark image next to each of a couple dozen suppliers, after reading through PDFs from the CRM. Honestly, I was impressed they never missed one. But it took about two hours every month.",
+              desc: "I was working with the supplier success team on a reporting project that involved supplier subscriptions. When I asked how they kept track of who had what, they showed me a checklist where they added a checkmark image next to a long list of suppliers, after reading through PDFs from the CRM. Honestly, I was impressed they never missed one. But it took about two hours every month.",
               methods: ['User interviews', 'Process mapping', 'Vendor options', 'API'],
               label: 'What we did',
               finding: "I checked with the CRM's admin to see what our subscription included, and there were both API and MCP options. Since we only needed to read the data, the API made the most sense. It was cheaper, and we could always add the MCP later. I worked with the AI enablement and dev teams to set it up, and the monthly check now takes seconds.",
@@ -101,10 +102,10 @@ export default function AIEnablement() {
             {
               num: '02',
               title: 'My monthly savings review',
-              desc: "Every month I review the customer savings we report to make sure they're accurate. I'd done this by hand for months, so I knew what usually needed correcting and how to judge how big an issue was. I put that into a workflow where scripts and set steps handle all the numbers, so the results come out the same every time.",
+              desc: "Every month I review the savings we report to make sure they're accurate. I'd done it by hand for months, so I knew what to look for. I turned that into a workflow where scripts handle all the numbers, so the results come out the same every time.",
               methods: ['LLMs', 'Python scripts', 'Human in the loop', 'Workflow design'],
               label: 'How it works',
-              finding: "The one place the LLM makes a judgment call is reading a platform proposal and deciding whether it's actually comparable to the winning one. I used to do that part myself, but it knows a lot more about scientific processes than I do. It gives me its call, how confident it is, and the details it noticed, and I decide what's correct. It feels more like having an assistant than handing off my job. Review time is down over 70%.",
+              finding: "The one place the LLM makes a judgment call is checking platform proposals for equivalence. It gives me its call, how confident it is, and the details it noticed, and I make the final decision. It feels more like having an assistant than handing off my job. Review time is down over 70%.",
             },
             {
               num: '03',
@@ -162,7 +163,7 @@ export default function AIEnablement() {
 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerSig}>Alina Markova, 2026</span>
+          <Signature year={2026} />
           <Link href="/projects" className={styles.footerBack}>← All projects</Link>
         </div>
       </footer>

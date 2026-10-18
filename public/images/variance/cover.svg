@@ -20,5 +20,5 @@
   <text x="400" y="244" font-family="sans-serif" font-size="10" fill="#6B1A2A" opacity="0.6">Projection</text>
   <line x1="460" y1="240" x2="485" y2="240" stroke="#E8173A" stroke-opacity="0.9" stroke-width="2"/>
   <text x="490" y="244" font-family="sans-serif" font-size="10" fill="#6B1A2A" opacity="0.6">Actual</text>
-  <text x="300" y="275" font-family="Georgia, serif" font-size="13" fill="#6B1A2A" text-anchor="middle" opacity="0.7">Variance Intelligence Agent · Live Nation</text>
+  <text x="300" y="275" font-family="Georgia, serif" font-size="13" fill="#6B1A2A" text-anchor="middle" opacity="0.7">Variance Intelligence Agent</text>
 </svg>

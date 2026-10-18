@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import styles from './blog.module.css'
+import Signature from '../components/Signature'
 
 const posts = [
   {
@@ -105,7 +106,7 @@ export default function Blog() {
 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerSig}>Alina Markova, 2026</span>
+          <Signature year={2026} />
           <div className={styles.footerLinks}>
             <a href="https://linkedin.com/in/alinamarkova" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://github.com/a-markova" target="_blank" rel="noopener">GitHub</a>

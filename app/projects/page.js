@@ -4,14 +4,15 @@ import Image from 'next/image'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import styles from './projects.module.css'
+import Signature from '../components/Signature'
 
 const projects = [
   {
     slug: 'scientist-bi',
     type: 'Business Intelligence · Product',
     title: 'Scientist.com In-House BI Tool',
-    desc: 'Led cross-functional delivery of the company\'s first in-house BI tool, now the primary reporting source for internal teams, customers, and suppliers.',
-    chips: ['SQL', 'Data Modeling', 'BI', 'Product'],
+    desc: 'Took Scientist.com\'s first in-house BI tool from stakeholder interviews and requirements to launch. It\'s now the main reporting source for internal teams, biotech and pharma customers, and suppliers.',
+    chips: ['Product', 'Requirements', 'BI', 'SQL'],
     image: '/images/scientist/cover.svg',
   },
   {
@@ -34,7 +35,7 @@ const projects = [
     slug: 'variance-agent',
     type: 'AI Agent · Analytics Engineering',
     title: 'Variance Intelligence Agent',
-    desc: 'Agentic pipeline for Live Nation that compares revenue projections to actuals and autonomously surfaces explanations using LLMs and web search.',
+    desc: 'Agentic pipeline for a live entertainment company that compares revenue projections to actuals and autonomously surfaces explanations using LLMs and web search.',
     chips: ['Python', 'LLM', 'SQL', 'RAG'],
     image: '/images/variance/cover.svg',
   },
@@ -128,7 +129,7 @@ export default function ProjectsPage() {
 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerSig}>Alina Markova, 2026</span>
+          <Signature year={2026} />
           <div className={styles.footerLinks}>
             <a href="https://linkedin.com/in/alinamarkova" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://github.com/a-markova" target="_blank" rel="noopener">GitHub</a>

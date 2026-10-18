@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import styles from './project.module.css'
+import Signature from '../../components/Signature'
 
 function FadeIn({ children, delay = 0 }) {
   const ref = useRef(null)
@@ -24,7 +25,7 @@ export default function ScientistBI() {
           <Link href="/projects" className={styles.back}>← Back to projects</Link>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className={styles.tags}>
-              {['Business Intelligence', 'Product', 'SQL', 'Data Modeling', 'Stakeholder Management'].map(t => (
+              {['Product', 'Business Intelligence', 'Requirements', 'Prioritization', 'Life Sciences'].map(t => (
                 <span key={t} className={styles.tag}>{t}</span>
               ))}
             </div>
@@ -76,7 +77,7 @@ export default function ScientistBI() {
           <FadeIn><p className={styles.eyebrow}>The problem</p></FadeIn>
           <FadeIn delay={0.1}>
             <p className={styles.prose}>
-              Scientist.com is a marketplace for scientific research — connecting biotech and pharma clients with suppliers worldwide. Before this project, <strong>neither side had visibility into their own activity on the platform.</strong> Customers couldn't see procurement status or spend trends. Suppliers had no digital window into orders, volume, or platform engagement. Reporting was ad-hoc, manual, and slow. As a founding member of the BI team, I led the cross-functional effort to change that.
+              Scientist.com is a marketplace for scientific research, connecting biotech and pharma companies with research suppliers. Before this project, <strong>neither side could really see their own activity on the platform.</strong> Customers couldn't check procurement status or spend trends, and suppliers had no digital view of their orders or volume. Reporting was manual and slow. As a founding member of the BI team, I led the cross-functional work to change that.
             </p>
           </FadeIn>
         </div>
@@ -88,28 +89,28 @@ export default function ScientistBI() {
 
       <section className={styles.blushBand}>
         <div className={styles.inner}>
-          <FadeIn><p className={styles.eyebrow}>How we built it</p></FadeIn>
+          <FadeIn><p className={styles.eyebrow}>How it came together</p></FadeIn>
           {[
             {
               num: '01',
-              title: 'Requirements & data discovery',
-              desc: 'Started with stakeholder interviews across sales, customer success, and leadership to understand what questions each audience needed answered. Then mapped those questions to the available data.',
-              methods: ['Stakeholder interviews', 'SQL', 'Data audit', 'Requirements docs'],
-              finding: 'Customer and supplier needs were fundamentally different — customers wanted spend visibility and procurement status, suppliers wanted order volume and platform performance. Two separate reporting surfaces, not one.',
+              title: 'Talking to users and setting priorities',
+              desc: 'I started with stakeholder interviews across sales, customer success, and leadership to understand what each audience needed to answer. Then I mapped those questions to the data we had and turned them into requirements and a prioritized list of what to build first.',
+              methods: ['Stakeholder interviews', 'Requirements', 'Prioritization', 'Data audit'],
+              finding: 'Customers and suppliers wanted different things. Customers cared about spend and procurement status, and suppliers cared about order volume and how they were doing on the platform. So we planned two separate reporting experiences instead of one.',
             },
             {
               num: '02',
-              title: 'Data modeling & dev collaboration',
-              desc: 'Worked directly with the engineering team to define the data models powering each report — specifying grain, aggregations, and business logic. Built the reporting layer in close collaboration with devs rather than in a standalone BI tool.',
+              title: 'Building it with engineering',
+              desc: 'I worked directly with engineering to define the data behind each report: the grain, the aggregations, and the business logic. We built the reports into the product itself instead of using a standalone BI tool.',
               methods: ['SQL', 'Data modeling', 'Cross-functional collaboration', 'Custom reporting'],
-              finding: 'Building custom within the product (vs. a standalone BI tool) meant tighter dev collaboration but a much better user experience — the reports felt native to the platform, which mattered for supplier adoption.',
+              finding: 'Building inside the product took more coordination with the devs, but the reports feel like part of the platform. That mattered a lot for getting suppliers to actually use them.',
             },
             {
               num: '03',
-              title: 'Supplier-facing launch',
-              desc: 'Designed and launched the supplier reporting experience — Scientist.com\'s first digital reporting product for suppliers. For many, this was their first time seeing their own procurement and spend data surfaced in one place.',
-              methods: ['Product design', 'Stakeholder QA', 'Data validation', 'Launch'],
-              finding: 'The supplier reports required extra care around data accuracy and framing — these were external users seeing platform data about themselves for the first time. Getting the trust layer right mattered as much as the data layer.',
+              title: 'Launching to suppliers',
+              desc: 'We put together a launch plan with customer success and supplier success and rolled out the supplier reporting, Scientist.com\'s first digital reporting for suppliers. For a lot of them, it was the first time seeing their own data in one place.',
+              methods: ['Launch plan', 'Stakeholder QA', 'Data validation', 'Rollout'],
+              finding: 'These were outside users seeing data about themselves for the first time, so accuracy and framing needed extra care. Getting them to trust the numbers mattered as much as the numbers.',
             },
           ].map((task, i) => (
             <FadeIn key={i} delay={i * 0.1}>
@@ -142,9 +143,9 @@ export default function ScientistBI() {
           <FadeIn><p className={styles.eyebrow}>What's next</p></FadeIn>
           <div className={styles.takeawayGrid}>
             {[
-              { title: 'Deeper supplier analytics', body: 'The initial reports established trust. The next phase is richer analytics — trend views, benchmarking, and recommendations that help suppliers optimize their platform presence.' },
-              { title: 'Proactive alerting', body: 'Moving from passive reporting to active intelligence: surface anomalies, flag stalled procurement, and notify stakeholders before they need to pull a report.' },
-              { title: 'Data science integration', body: 'Combining the reporting foundation with the data science team\'s models to deliver predictive signals alongside historical analytics.' },
+              { title: 'Deeper supplier analytics', body: 'The first reports built trust. Next could be trend views, benchmarking, and recommendations that help suppliers do better on the platform.' },
+              { title: 'Proactive alerts', body: 'Instead of waiting for someone to pull a report, flag anomalies or stalled procurement and let people know.' },
+              { title: 'Data science integration', body: 'Pair the reporting with the data science team\'s models so people see predictions next to the history.' },
             ].map((t, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div className={styles.takeaway}>
@@ -159,7 +160,7 @@ export default function ScientistBI() {
 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerSig}>Alina Markova, 2026</span>
+          <Signature year={2026} />
           <Link href="/projects" className={styles.footerBack}>← All projects</Link>
         </div>
       </footer>

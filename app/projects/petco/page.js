@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import styles from './project.module.css'
+import Signature from '../../components/Signature'
 
 function FadeIn({ children, delay = 0 }) {
   const ref = useRef(null)
@@ -36,7 +37,7 @@ export default function Petco() {
               <span><strong>Type</strong> MSBA Industry Capstone · Project Lead</span>
               <span><strong>Partner</strong> Petco</span>
               <span><strong>Team</strong> 4 people</span>
-              <span><strong>Timeline</strong> Jan. – Jun. 2026</span>
+              <span><strong>Timeline</strong> Mar. – Jun. 2026</span>
             </div>
           </motion.div>
         </div>
@@ -153,7 +154,7 @@ export default function Petco() {
 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerSig}>Alina Markova, 2026</span>
+          <Signature year={2026} />
           <Link href="/projects" className={styles.footerBack}>← All projects</Link>
         </div>
       </footer>

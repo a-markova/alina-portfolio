@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Link from 'next/link'
 import styles from './post.module.css'
+import Signature from '../../components/Signature'
 import 'katex/dist/katex.min.css'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
@@ -22,7 +23,7 @@ export const dynamicParams = false
 export async function generateMetadata({ params }) {
   const { slug } = await params
   const { data } = matter(fs.readFileSync(path.join(POSTS_DIR, `${slug}.mdx`), 'utf-8'))
-  return { title: `${data.title} · Alina Markova`, description: data.subtitle }
+  return { title: data.title, description: data.subtitle }
 }
 
 export default async function BlogPost({ params }) {
@@ -69,7 +70,7 @@ export default async function BlogPost({ params }) {
 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerSig}>Alina Markova, 2026</span>
+          <Signature year={2026} />
           <Link href="/blog" className={styles.footerBack}>← All posts</Link>
         </div>
       </footer>
