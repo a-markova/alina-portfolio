@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Archive',
+  title: 'Project log',
   description: "A running log of what I've worked on.",
 }
 

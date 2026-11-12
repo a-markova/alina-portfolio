@@ -74,6 +74,14 @@
   color: var(--text);
 }
 
+.name {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin: -2px 0 8px;
+}
+
 .desc {
   font-size: 13px;
   color: var(--text-muted);
@@ -101,6 +109,13 @@
   color: var(--red);
   font-weight: 600;
 }
+
+.all {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.all a:hover { text-decoration: underline; }
 
 @media (max-width: 720px) {
   .grid { grid-template-columns: 1fr; }

@@ -5,31 +5,20 @@ import { motion, useInView } from 'framer-motion'
 import styles from './Projects.module.css'
 import HandMark from './HandMark'
 
+// The two Scientist.com projects live in the Currently section above, so they aren't repeated here.
 const projects = [
   {
-    type: 'Business Intelligence · Product',
-    title: 'Scientist.com In-House BI Tool',
-    desc: 'Took Scientist.com\'s first in-house BI tool from stakeholder interviews and requirements to launch. It\'s now the main reporting source for internal teams, biotech and pharma customers, and suppliers.',
-    chips: ['Product', 'Requirements', 'BI', 'SQL'],
-    href: '/projects/scientist-bi',
-  },
-  {
-    type: 'AI Enablement · Process Improvement',
-    title: 'AI Enablement at Scientist.com',
-    desc: 'A couple of manual processes I\'ve helped automate: an LLM-assisted review that cut my monthly review time by over 70%, and an API that replaced a 2-hour monthly check for the supplier team.',
-    chips: ['LLMs', 'APIs', 'Automation', 'Workshops'],
-    href: '/projects/ai-enablement',
-  },
-  {
     type: 'Capstone · Retail Analytics',
-    title: 'Petco Product Substitution Model',
+    title: 'When a product is out of stock, where does the demand go?',
+    name: 'Petco Product Substitution Model',
     desc: 'Led a 4-person team looking at where demand goes when products are out of stock. The answer ended up being basket dominance at the department level: a clear, defensible prioritization with $82M in immediate inventory impact.',
     chips: ['SQL', 'Python', 'Basket Analysis', 'Inventory Planning'],
     href: '/projects/petco',
   },
   {
     type: 'AI Agent · Analytics Engineering',
-    title: 'Variance Intelligence Agent',
+    title: 'Why did revenue miss the projection?',
+    name: 'Variance Intelligence Agent',
     desc: 'Agentic pipeline for a live entertainment company that compares revenue projections to actuals and autonomously surfaces explanations using LLMs and web search.',
     chips: ['Python', 'LLM', 'SQL', 'RAG'],
     href: '/projects/variance-agent',
@@ -37,6 +26,7 @@ const projects = [
   {
     type: 'Machine learning · NLP',
     title: "Can a dress review predict if it'll fit?",
+    name: 'Rent the Runway Reviews',
     desc: '190k+ Rent the Runway reviews across three ML tasks — sentiment, event type, and fit prediction.',
     chips: ['Python', 'scikit-learn', 'TF-IDF', 'NLP'],
     href: '/projects/rent-the-runway',
@@ -44,6 +34,7 @@ const projects = [
   {
     type: 'Causal inference · Marketing',
     title: 'Stop targeting people who were going to buy anyway.',
+    name: 'Ad Targeting Uplift Model',
     desc: 'Uplift modeling on 120k users from a randomized ad experiment to maximize incremental profit.',
     chips: ['XGBoost', 'Polars', 'pyrsm', 'RCT'],
     href: '/projects/uplift-model',
@@ -64,6 +55,7 @@ function ProjectCard({ p, i }) {
       <Link href={p.href} className={styles.card}>
         <div className={styles.type}>{p.type}</div>
         <div className={styles.title}>{p.title}</div>
+        <div className={styles.name}>{p.name}</div>
         <div className={styles.desc}>{p.desc}</div>
         <div className={styles.chips}>
           {p.chips.map(c => <span key={c} className={styles.chip}>{c}</span>)}
@@ -92,6 +84,9 @@ export default function Projects() {
         </motion.p>
         <div className={styles.grid}>
           {projects.map((p, i) => <ProjectCard key={i} p={p} i={i} />)}
+        </div>
+        <div className={styles.all}>
+          <Link href="/projects" className={styles.link}>All projects →</Link>
         </div>
       </div>
     </section>

@@ -10,7 +10,8 @@ const projects = [
   {
     slug: 'scientist-bi',
     type: 'Business Intelligence · Product',
-    title: 'Scientist.com In-House BI Tool',
+    title: 'Suppliers had never seen their own data.',
+    name: 'Scientist.com In-House BI Tool',
     desc: 'Took Scientist.com\'s first in-house BI tool from stakeholder interviews and requirements to launch. It\'s now the main reporting source for internal teams, biotech and pharma customers, and suppliers.',
     chips: ['Product', 'Requirements', 'BI', 'SQL'],
     image: '/images/scientist/cover.svg',
@@ -18,7 +19,8 @@ const projects = [
   {
     slug: 'ai-enablement',
     type: 'AI Enablement · Process Improvement',
-    title: 'AI Enablement at Scientist.com',
+    title: 'What are we still doing by hand?',
+    name: 'AI Enablement at Scientist.com',
     desc: 'A couple of manual processes I\'ve helped automate: an LLM-assisted review that cut my monthly review time by over 70%, and an API that replaced a 2-hour monthly check for the supplier team.',
     chips: ['LLMs', 'APIs', 'Automation', 'Workshops'],
     image: '/images/ai-enablement/cover.svg',
@@ -26,7 +28,8 @@ const projects = [
   {
     slug: 'petco',
     type: 'Capstone · Retail Analytics',
-    title: 'Petco Product Substitution Model',
+    title: 'When a product is out of stock, where does the demand go?',
+    name: 'Petco Product Substitution Model',
     desc: 'Led a 4-person team looking at where demand goes when products are out of stock. The answer ended up being basket dominance at the department level: a clear, defensible prioritization with $82M in immediate inventory impact.',
     chips: ['SQL', 'Python', 'Basket Analysis', 'Inventory Planning'],
     image: '/images/petco/cover.svg',
@@ -34,7 +37,8 @@ const projects = [
   {
     slug: 'variance-agent',
     type: 'AI Agent · Analytics Engineering',
-    title: 'Variance Intelligence Agent',
+    title: 'Why did revenue miss the projection?',
+    name: 'Variance Intelligence Agent',
     desc: 'Agentic pipeline for a live entertainment company that compares revenue projections to actuals and autonomously surfaces explanations using LLMs and web search.',
     chips: ['Python', 'LLM', 'SQL', 'RAG'],
     image: '/images/variance/cover.svg',
@@ -43,6 +47,7 @@ const projects = [
     slug: 'rent-the-runway',
     type: 'Machine learning · NLP',
     title: "Can a dress review predict if it'll fit?",
+    name: 'Rent the Runway Reviews',
     desc: '190k+ Rent the Runway reviews across three ML tasks — sentiment, event type, and fit prediction.',
     chips: ['Python', 'scikit-learn', 'TF-IDF', 'NLP'],
     image: '/images/renttherunway/cover.jpeg',
@@ -51,6 +56,7 @@ const projects = [
     slug: 'uplift-model',
     type: 'Causal inference · Marketing',
     title: 'Stop targeting people who were going to buy anyway.',
+    name: 'Ad Targeting Uplift Model',
     desc: 'Uplift modeling on 120k users from a randomized ad experiment to maximize incremental profit.',
     chips: ['XGBoost', 'Polars', 'pyrsm', 'RCT'],
     image: '/images/uplift/cover.jpeg',
@@ -72,7 +78,7 @@ function ProjectCard({ p, i }) {
         <div className={styles.cardImage}>
           <Image
             src={p.image}
-            alt={p.title}
+            alt={p.name}
             width={600}
             height={300}
             className={styles.coverImg}
@@ -81,6 +87,7 @@ function ProjectCard({ p, i }) {
         <div className={styles.cardBody}>
           <div className={styles.type}>{p.type}</div>
           <div className={styles.title}>{p.title}</div>
+          <div className={styles.name}>{p.name}</div>
           <div className={styles.desc}>{p.desc}</div>
           <div className={styles.chips}>
             {p.chips.map(c => <span key={c} className={styles.chip}>{c}</span>)}
@@ -109,7 +116,7 @@ export default function ProjectsPage() {
             <p className={styles.eyebrow}>Work</p>
             <h1 className={styles.heading}>Projects</h1>
             <p className={styles.subheading}>
-              A selection of analytical work spanning machine learning, causal inference, and business intelligence.
+              Case studies from my work at Scientist.com and my MSBA at UC San Diego.
             </p>
           </motion.div>
         </div>
@@ -124,6 +131,9 @@ export default function ProjectsPage() {
           <div className={styles.grid}>
             {projects.map((p, i) => <ProjectCard key={p.slug} p={p} i={i} />)}
           </div>
+          <p className={styles.logLink}>
+            Looking for the smaller pieces? <Link href="/archive">See the full project log →</Link>
+          </p>
         </div>
       </section>
 
