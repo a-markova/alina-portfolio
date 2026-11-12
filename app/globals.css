@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -24,6 +24,8 @@
   --border-sage: #A8C8C0;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'Inter', sans-serif;
+  /* handwriting font for greetings and little notes; loaded by the @import above */
+  --font-hand: 'Caveat';
 }
 
 html {
