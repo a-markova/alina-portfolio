@@ -46,6 +46,14 @@
   max-width: 420px;
 }
 
+.bioLink {
+  color: var(--red);
+  font-weight: 500;
+  border-bottom: 1px solid currentColor;
+}
+
+.bioLink:hover { color: var(--red-hover); }
+
 .heroRight {
   display: flex;
   justify-content: center;

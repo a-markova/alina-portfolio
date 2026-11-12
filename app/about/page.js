@@ -43,10 +43,16 @@ export default function About() {
               <em className={styles.accent}>etc.</em>
             </h1>
             <p className={styles.heroBio}>
-              At work, I'm pulling data for internal teams, building reporting for external ones, and dabbling in data science and dev. My favorite part is connecting all the teams it takes to get a project across the finish line.
+              I'm a business intelligence analyst at Scientist.com, a marketplace that connects biotech and pharma companies with research suppliers. I pull data for internal teams, build reporting for customers and suppliers, and take on data science and dev work when a project needs it.
             </p>
             <p className={styles.heroBio}>
-              At home, I'm always spending time with loved ones, trying to get outside, and fiddling with art projects!
+              My favorite part is connecting all the teams it takes to get a project across the finish line, and product management is where I'm headed next.
+            </p>
+            <p className={styles.heroBio}>
+              At home, I paint, get outside whenever I can, and spend time with the people (and two tabby cats) I love.
+            </p>
+            <p className={styles.heroBio}>
+              Want to talk analytics, product, or painting? <a href="mailto:alina@markov.com" className={styles.bioLink}>Say hello</a>.
             </p>
           </motion.div>
 

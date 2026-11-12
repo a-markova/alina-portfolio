@@ -14,7 +14,6 @@ export default function Navbar() {
         <Link href="/" className={isActive('/') ? styles.active : ''}>Home</Link>
         <Link href="/about" className={isActive('/about') ? styles.active : ''}>About</Link>
         <Link href="/projects" className={isActive('/projects') ? styles.active : ''}>Projects</Link>
-        <Link href="/archive" className={isActive('/archive') ? styles.active : ''}>Archive</Link>
         <Link href="/blog" className={isActive('/blog') ? styles.active : ''}>Blog</Link>
         <Link href="/resume" className={isActive('/resume') ? styles.active : ''}>Resume</Link>
       </div>

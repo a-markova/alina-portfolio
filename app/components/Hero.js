@@ -38,7 +38,7 @@ export default function Hero() {
               Alina<br /><em className={styles.nameAccent}>Markova</em>
             </h1>
             <p className={styles.tagline}>
-              Welcome to my website! The intention is to be as candid as LinkedIn allows. You can view my professional projects, artistic creations, and (of course) hobbies. I hope you enjoy. 
+              I'm a business intelligence analyst at Scientist.com, a marketplace for life sciences research, working toward product management. I build the reporting our teams, customers, and suppliers rely on. Away from work I paint, get outside, and hang out with my two tabby cats.
             </p>
           </motion.div>
 
@@ -85,9 +85,9 @@ export default function Hero() {
         <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={1}>
           <div className={styles.statGrid}>
             {[
-              { num: 'Cross-Functional Experience', label: 'Analytics, Reporting, Consulting' },
-              { num: '2+ Years of Experience', label: 'Founding member of Business Intelligence team @ Scientist.com' },
-              { num: 'Biotech & Pharma', label: '' },
+              { num: 'Founding BI Team Member', label: 'Scientist.com, where I started as an FP&A intern' },
+              { num: '2+ Years of Experience', label: 'Analytics, reporting, and consulting' },
+              { num: 'Biotech & Pharma', label: 'The customers I build reporting for' },
               { num: 'East of Eden', label: 'Book of the month' },
             ].map((s, i) => (
               <motion.div key={i} className={styles.stat} whileHover={{ scale: 1.02 }} transition={{ duration: 0.15 }}>
@@ -97,7 +97,7 @@ export default function Hero() {
             ))}
           </div>
           <div className={styles.chips}>
-            {['SQL', 'Python', 'Tableau', 'Power BI', 'R', 'ML', 'AI', 'Agentic AI', 'Snowflake', 'GenAI', 'Polars', 'Google Analytics'].map(c => (
+            {['SQL', 'Python', 'Snowflake', 'Apache Superset', 'Tableau', 'Power BI', 'R', 'Machine learning', 'LLMs & AI agents', 'Polars', 'Google Analytics'].map(c => (
               <span key={c} className={styles.chip}>{c}</span>
             ))}
           </div>

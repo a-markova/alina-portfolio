@@ -120,6 +120,14 @@
   color: var(--text);
 }
 
+.name {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin: -4px 0 10px;
+}
+
 .desc {
   font-size: 14px;
   color: var(--text-muted);
@@ -148,6 +156,19 @@
   font-weight: 600;
   letter-spacing: 0.04em;
 }
+
+.logLink {
+  margin-top: 1.75rem;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.logLink a {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.logLink a:hover { text-decoration: underline; }
 
 .footer {
   background: var(--blush);

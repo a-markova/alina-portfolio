@@ -35,7 +35,7 @@ const entries = [
   },
   {
     date: '2026',
-    project: 'Internal & External BI Tools',
+    project: 'Scientist.com In-House BI Tool',
     description: 'Launched Scientist.com\'s first in-house BI tools: reporting for internal teams, plus external reporting for customers and suppliers.',
     tags: ['BI', 'SQL', 'Cross-functional', 'Launch'],
     href: '/projects/scientist-bi',
@@ -63,7 +63,7 @@ const entries = [
   },
   {
     date: 'Nov. 2025',
-    project: 'Rent the Runway ML',
+    project: 'Rent the Runway Reviews',
     description: 'Sentiment, event type, and fit prediction on 190k+ reviews.',
     tags: ['NLP', 'scikit-learn', 'Python'],
     href: '/projects/rent-the-runway',
@@ -110,9 +110,9 @@ export default function Archive() {
             transition={{ duration: 0.6 }}
           >
             <p className={styles.eyebrow}>History</p>
-            <h1 className={styles.heading}>Archive</h1>
+            <h1 className={styles.heading}>Project log</h1>
             <p className={styles.subheading}>
-              A running log of what I've worked on. Updated as projects complete.
+              A running log of what I've worked on, including the smaller pieces behind each case study. Updated as projects complete.
             </p>
           </motion.div>
         </div>
