@@ -7,6 +7,14 @@ import Signature from '../components/Signature'
 
 const posts = [
   {
+    slug: 'work-to-live',
+    date: 'Nov 23, 2026',
+    title: 'Work to Live: The Case for Hobbies',
+    description: 'What the research says about painting, playing, and having a life outside work, from lower cortisol to longer lives.',
+    tags: ['Life', 'Wellbeing'],
+    href: '/blog/work-to-live',
+  },
+  {
     slug: 'max-diff',
     date: 'May 27, 2026',
     title: 'MaxDiff Analysis of MSBA Class Preferences',

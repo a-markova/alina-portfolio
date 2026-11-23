@@ -38,7 +38,7 @@ export default function Hero() {
               Alina<br /><em className={styles.nameAccent}>Markova</em>
             </h1>
             <p className={styles.tagline}>
-              I'm a business intelligence analyst at Scientist.com, a marketplace for life sciences research, working toward product management. I build the reporting our teams, customers, and suppliers rely on. Away from work I paint, get outside, and hang out with my two tabby cats.
+              I'm a business intelligence analyst at Scientist.com, a marketplace for life sciences research. I build the reporting our customers, suppliers, and teams rely on, and I'm working my way toward product management. When I'm not at work, I'm painting, getting outside, or hanging out with my two tabbies, Handsome and Diva.
             </p>
           </motion.div>
 
@@ -85,10 +85,10 @@ export default function Hero() {
         <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={1}>
           <div className={styles.statGrid}>
             {[
-              { num: 'Founding BI Team Member', label: 'Scientist.com, where I started as an FP&A intern' },
+              { num: 'Founding BI Team Member', label: 'Data insights for strategy, visibility, and efficiency' },
               { num: '2+ Years of Experience', label: 'Analytics, reporting, and consulting' },
-              { num: 'Biotech & Pharma', label: 'The customers I build reporting for' },
-              { num: 'East of Eden', label: 'Book of the month' },
+              { num: 'Biotech & Pharma', label: '' },
+              { num: 'Lonesome Dove', label: 'Book of the month' },
             ].map((s, i) => (
               <motion.div key={i} className={styles.stat} whileHover={{ scale: 1.02 }} transition={{ duration: 0.15 }}>
             <span className={styles.statNum}>{s.num}</span>
