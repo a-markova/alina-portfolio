@@ -87,7 +87,7 @@ export default function Hero() {
             {[
               { num: 'Founding BI Team Member', label: 'Data insights for strategy, visibility, and efficiency' },
               { num: '2+ Years of Experience', label: 'Analytics, reporting, and consulting' },
-              { num: 'Biotech & Pharma', label: 'The customers I build reporting for' },
+              { num: 'Biotech & Pharma', label: '' },
               { num: 'East of Eden', label: 'Book of the month' },
             ].map((s, i) => (
               <motion.div key={i} className={styles.stat} whileHover={{ scale: 1.02 }} transition={{ duration: 0.15 }}>
