@@ -43,10 +43,10 @@ export default function About() {
               <em className={styles.accent}>etc.</em>
             </h1>
             <p className={styles.heroBio}>
-              I'm a business intelligence analyst at Scientist.com, a marketplace that connects biotech and pharma companies with research suppliers. I pull data for internal teams, build reporting for customers and suppliers, and take on data science and dev work when a project needs it.
+              I'm a business intelligence analyst at Scientist.com, a marketplace that connects biotech and pharma companies with research suppliers. I manage all of our external data sharing, help internal teams work with our complex, interconnected data, and take on data science and dev work when a project needs it.
             </p>
             <p className={styles.heroBio}>
-              My favorite part is connecting all the teams it takes to get a project across the finish line, and product management is where I'm headed next.
+              My favorite part is connecting all the teams it takes to get a project across the finish line. I love working at the intersection of data, building things, and product management. I take ownership of my work, and I'm always looking for ways to grow.
             </p>
             <p className={styles.heroBio}>
               At home, I paint, get outside whenever I can, and spend time with the people I love, plus Handsome and Diva, my two tabbies.
