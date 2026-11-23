@@ -49,7 +49,7 @@ export default function About() {
               My favorite part is connecting all the teams it takes to get a project across the finish line, and product management is where I'm headed next.
             </p>
             <p className={styles.heroBio}>
-              At home, I paint, get outside whenever I can, and spend time with the people (and two tabby cats) I love.
+              At home, I paint, get outside whenever I can, and spend time with the people I love, plus Handsome and Diva, my two tabbies.
             </p>
             <p className={styles.heroBio}>
               Want to talk analytics, product, or painting? <a href="mailto:alina@markov.com" className={styles.bioLink}>Say hello</a>.
@@ -74,7 +74,7 @@ export default function About() {
               <div className={styles.portraitAccent} />
               <Image
                 src="/images/cats/dream-team.jpg"
-                alt="My two tabby cats looking out the window"
+                alt="Handsome and Diva, my two tabby cats, looking out the window"
                 width={675}
                 height={900}
                 className={styles.catPhoto}

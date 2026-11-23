@@ -38,7 +38,7 @@ export default function Hero() {
               Alina<br /><em className={styles.nameAccent}>Markova</em>
             </h1>
             <p className={styles.tagline}>
-              I'm a business intelligence analyst at Scientist.com, a marketplace for life sciences research, working toward product management. I build the reporting our teams, customers, and suppliers rely on. Away from work I paint, get outside, and hang out with my two tabby cats.
+              I'm a business intelligence analyst at Scientist.com, a marketplace for life sciences research. I build the reporting our customers, suppliers, and teams rely on, and I'm working my way toward product management. When I'm not at work, I'm painting, getting outside, or hanging out with my two tabbies, Handsome and Diva.
             </p>
           </motion.div>
 
