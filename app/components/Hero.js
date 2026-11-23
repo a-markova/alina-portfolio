@@ -85,7 +85,7 @@ export default function Hero() {
         <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={1}>
           <div className={styles.statGrid}>
             {[
-              { num: 'Founding BI Team Member', label: 'Scientist.com, where I started as an FP&A intern' },
+              { num: 'Founding BI Team Member', label: 'Data insights for strategy, visibility, and efficiency' },
               { num: '2+ Years of Experience', label: 'Analytics, reporting, and consulting' },
               { num: 'Biotech & Pharma', label: 'The customers I build reporting for' },
               { num: 'East of Eden', label: 'Book of the month' },
